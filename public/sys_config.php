@@ -21,7 +21,7 @@ return array(
 'TEMPLATE'=>'fanwe',
 'SITE_LOGO'=>'./public/attachment/201410/13/04/543ae60d1a3b9.png',
 'SEO_TITLE'=>'兆余大学生众筹',
-'REPLY_ADDRESS'=>'info@fanwe.com',
+'REPLY_ADDRESS'=>'900930@gmail.com',
 'MAIL_ON'=>'1',
 'SMS_ON'=>'0',
 'PUBLIC_DOMAIN_ROOT'=>'',
