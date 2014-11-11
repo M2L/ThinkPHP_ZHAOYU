@@ -59,9 +59,10 @@ class DealCateAction extends CommonAction{
 		B('FilterString');
 		$ajax = intval($_REQUEST['ajax']);
 		$data = M(MODULE_NAME)->create ();
-
+		var_dump($data);
 		//开始验证有效性
 		$this->assign("jumpUrl",u(MODULE_NAME."/add"));
+
 		if(!check_empty($data['name']))
 		{
 			$this->error("请输入分类名称");
@@ -84,17 +85,16 @@ class DealCateAction extends CommonAction{
 	public function update() {
 		B('FilterString');
 		$data = M(MODULE_NAME)->create ();
-		
 		$log_info = M(MODULE_NAME)->where("id=".intval($data['id']))->getField("name");
 		//开始验证有效性
 		$this->assign("jumpUrl",u(MODULE_NAME."/edit",array("id"=>$data['id'])));
+		
 		if(!check_empty($data['name']))
 		{
 			$this->error("请输入分类名称");
 		}	
 		
-
-		$list=M(MODULE_NAME)->save ($data);
+		$list=M(MODULE_NAME)->save($data);
 		if (false !== $list) {
 			//成功提示
 			save_log($log_info.L("UPDATE_SUCCESS"),1);

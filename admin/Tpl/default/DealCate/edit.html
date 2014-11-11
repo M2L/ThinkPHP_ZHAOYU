@@ -11,7 +11,7 @@
 	</tr>
 	<tr>
 		<td class="item_title">标题:</td>
-		<td class="item_input"><input type="text" class="textbox require" name="title" value="{$vo.title}" /></td>
+		<td class="item_input"><input type="text" class="textbox require" name="name" value="{$vo.name}" /></td>
 	</tr>
 	<tr>
 		<td class="item_title">链接:</td>
@@ -19,7 +19,11 @@
 	</tr>
 	<tr>
 		<td class="item_title">图片:</td>
-		<td class="item_input"><html:imgUpload name = 'image' id='image'  value='$vo.image'  /></td>
+		<td class="item_input"><html:imgUpload name = "image" id="image"  value='$vo.image'  /></td>
+	</tr>
+	<tr>
+		<td class="item_title">图片2:</td>
+		<td class="item_input"><html:imgUpload name = "hover_image" id="hover_image"  value='$vo.hover_image'  /></td>
 	</tr>
 	
 	<tr>
@@ -31,7 +35,7 @@
 		<td class="item_title"></td>
 		<td class="item_input">
 			<!--隐藏元素-->
-			<input type="hidden" name="{:conf("VAR_MODULE")}" value="IndexImage" />
+			<input type="hidden" name="{:conf("VAR_MODULE")}" value="DealCate" />
 			<input type="hidden" name="{:conf("VAR_ACTION")}" value="update" />
 			<input type="hidden" name="id" value="{$vo.id}" />
 			<!--隐藏元素-->

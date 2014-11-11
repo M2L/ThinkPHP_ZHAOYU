@@ -33,7 +33,10 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 	<div class="f_r">
 		<ul class="tab-nav">
 			{foreach from=$cate_list item=cate_item}
-			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}">{$cate_item.name}</a></li>
+			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}">
+						<img src="{$cate_item.image}"  width="320px"  height="100px"
+						onmouseover="this.src='{$cate_item.hover_image}'"onmouseout="this.src='{$cate_item.image}'"/>
+					</a></li>
 			{/foreach}
 		</ul>
 	</div>

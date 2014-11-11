@@ -3206,7 +3206,7 @@ KE.plugin['upload_image'] = {
 				cmd : 'upload_image',
 				file : 'image/upload_image.php?id=' + id + '&ver=' + KE.version +'&root='+ROOT+'&var_module='+VAR_MODULE+'&var_action='+VAR_ACTION+'&file='+KE.util.getData(id),
 				width : 400,
-				height : 80,
+				height : 100,
 				loadingMode : true,
 				title : KE.lang['upload_image'],
 				yesButton : KE.lang['yes'],

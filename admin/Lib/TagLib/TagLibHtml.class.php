@@ -683,15 +683,15 @@ class TagLibHtml extends TagLib
 			$img_url = "<if condition=\"".$value." eq ''\">./admin/Tpl/default/Common/images/no_pic.gif<else />{".$value."}</if>";
 			$script = "<if condition=\"".$value." neq ''\">onclick='openimg(\"".$id."\")'</if>";
 			$hide = "<if condition=\"".$value." eq ''\">display:none;<else />display:inline-block;</if>";
-		}
+        
+        }
 		else
 		{
 			$img_url = "./admin/Tpl/default/Common/images/no_pic.gif";
 			$script = ""; 
 			$hide = "display:none;";
 		}
-		
-        $parseStr="<div style='width:120px; height:40px; margin-left:10px; display:inline-block;  float:left;' class='none_border'><script type='text/javascript'>var eid = '".$id."';".
+        $parseStr="<div style='width:120px; height:40px; margin-left:10px; display:inline-block;  float:left;' class='none_border' ><script type='text/javascript'>var eid = '".$id."';".
     					"KE.show({".
         				"id : eid,".
        					"items : ['upload_image'],".        
@@ -700,13 +700,15 @@ class TagLibHtml extends TagLib
 						"resizeMode : 0".										
    						"});".
   						"</script>";
+      
         				if($value)
 		            	$parseStr.= "<div style='font-size:0px;'><textarea id='".$id."' name='".$name."' style='width:120px; height:25px;' >{".$value."}</textarea> </div></div>";
 		            	else
-		            	$parseStr.= "<div style='font-size:0px;'><textarea id='".$id."' name='".$name."' style='width:120px; height:25px;' ></textarea> </div>";
+		            	$parseStr.= "<div style='font-size:0px;'><textarea id='".$id."' name='".$name."' style='width:120px; height:25px;' ></textarea> </div></div>";
 		            	$parseStr.="<input type='text' id='focus_".$id."' style='font-size:0px; border:0px; padding:0px; margin:0px; line-height:0px; width:0px; height:0px;' /></div>";
 		            	$parseStr.= "<img src='".$img_url."' ".$script." style='display:inline-block; float:left; cursor:pointer; margin-left:10px; border:#ccc solid 1px; width:".$width."px; height:".$height."px;' id='img_".$id."' />";
 		            	$parseStr.= "<img src='".__ROOT__."/admin/Tpl/default/Common/images/del.gif' style='".$hide." margin-left:10px; float:left; border:#ccc solid 1px; width:35px; height:35px; cursor:pointer;' id='img_del_".$id."' onclick='delimg(\"".$id."\")' title='删除' />";
+        
         return $parseStr;
     }
 }//类定义结束
