@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Oct 30, 2014 at 04:22 PM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.12
+-- Host: 127.0.0.1
+-- Generation Time: 2014-11-12 20:19:23
+-- 服务器版本： 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,13 +19,11 @@ SET time_zone = "+00:00";
 --
 -- Database: `zhaoyu3`
 --
-CREATE DATABASE IF NOT EXISTS `zhaoyu3` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `zhaoyu3`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_admin`
+-- 表的结构 `fanwe_admin`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_admin` (
@@ -42,16 +40,16 @@ CREATE TABLE IF NOT EXISTS `fanwe_admin` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_admin`
+-- 转存表中的数据 `fanwe_admin`
 --
 
 INSERT INTO `fanwe_admin` (`id`, `adm_name`, `adm_password`, `is_effect`, `is_delete`, `role_id`, `login_time`, `login_ip`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, 4, 1413195328, '127.0.0.1');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, 4, 1415691829, '127.0.0.1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_adv`
+-- 表的结构 `fanwe_adv`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_adv` (
@@ -73,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_adv` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_api_log`
+-- 表的结构 `fanwe_api_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_api_log` (
@@ -86,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_api_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_api_login`
+-- 表的结构 `fanwe_api_login`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_api_login` (
@@ -102,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_api_login` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=15 ;
 
 --
--- Dumping data for table `fanwe_api_login`
+-- 转存表中的数据 `fanwe_api_login`
 --
 
 INSERT INTO `fanwe_api_login` (`id`, `name`, `config`, `class_name`, `icon`, `bicon`, `is_weibo`, `dispname`) VALUES
@@ -112,7 +110,7 @@ INSERT INTO `fanwe_api_login` (`id`, `name`, `config`, `class_name`, `icon`, `bi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_apns_devices`
+-- 表的结构 `fanwe_apns_devices`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_apns_devices` (
@@ -149,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_apns_devices` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='Store unique devices' AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_apns_devices`
+-- 转存表中的数据 `fanwe_apns_devices`
 --
 
 INSERT INTO `fanwe_apns_devices` (`pid`, `clientid`, `appname`, `appversion`, `deviceuid`, `devicetoken`, `devicename`, `devicemodel`, `deviceversion`, `pushbadge`, `pushalert`, `pushsound`, `development`, `status`, `created`, `modified`) VALUES
@@ -158,7 +156,7 @@ INSERT INTO `fanwe_apns_devices` (`pid`, `clientid`, `appname`, `appversion`, `d
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_apns_device_history`
+-- 表的结构 `fanwe_apns_device_history`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_apns_device_history` (
@@ -197,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_apns_device_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_apns_logs`
+-- 表的结构 `fanwe_apns_logs`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_apns_logs` (
@@ -223,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_apns_logs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_apns_messages`
+-- 表的结构 `fanwe_apns_messages`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_apns_messages` (
@@ -238,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_apns_messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_area`
+-- 表的结构 `fanwe_area`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_area` (
@@ -251,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_area` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
 
 --
--- Dumping data for table `fanwe_area`
+-- 转存表中的数据 `fanwe_area`
 --
 
 INSERT INTO `fanwe_area` (`id`, `name`, `city_id`, `sort`, `pid`) VALUES
@@ -301,7 +299,7 @@ INSERT INTO `fanwe_area` (`id`, `name`, `city_id`, `sort`, `pid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_article`
+-- 表的结构 `fanwe_article`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_article` (
@@ -334,7 +332,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_article` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
--- Dumping data for table `fanwe_article`
+-- 转存表中的数据 `fanwe_article`
 --
 
 INSERT INTO `fanwe_article` (`id`, `title`, `content`, `cate_id`, `create_time`, `update_time`, `add_admin_id`, `is_effect`, `rel_url`, `update_admin_id`, `is_delete`, `click_count`, `sort`, `seo_title`, `seo_keyword`, `seo_description`, `uname`, `notice_page`, `sub_title`, `brief`) VALUES
@@ -365,7 +363,7 @@ INSERT INTO `fanwe_article` (`id`, `title`, `content`, `cate_id`, `create_time`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_article_cate`
+-- 表的结构 `fanwe_article_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_article_cate` (
@@ -384,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_article_cate` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
--- Dumping data for table `fanwe_article_cate`
+-- 转存表中的数据 `fanwe_article_cate`
 --
 
 INSERT INTO `fanwe_article_cate` (`id`, `title`, `brief`, `pid`, `is_effect`, `is_delete`, `type_id`, `sort`) VALUES
@@ -399,7 +397,7 @@ INSERT INTO `fanwe_article_cate` (`id`, `title`, `brief`, `pid`, `is_effect`, `i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_attr_stock`
+-- 表的结构 `fanwe_attr_stock`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_attr_stock` (
@@ -413,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_attr_stock` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=92 ;
 
 --
--- Dumping data for table `fanwe_attr_stock`
+-- 转存表中的数据 `fanwe_attr_stock`
 --
 
 INSERT INTO `fanwe_attr_stock` (`id`, `deal_id`, `attr_cfg`, `stock_cfg`, `attr_str`, `buy_count`) VALUES
@@ -424,7 +422,7 @@ INSERT INTO `fanwe_attr_stock` (`id`, `deal_id`, `attr_cfg`, `stock_cfg`, `attr_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_auto_cache`
+-- 表的结构 `fanwe_auto_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_auto_cache` (
@@ -440,7 +438,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_auto_cache` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_brand`
+-- 表的结构 `fanwe_brand`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_brand` (
@@ -460,7 +458,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_brand` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `fanwe_brand`
+-- 转存表中的数据 `fanwe_brand`
 --
 
 INSERT INTO `fanwe_brand` (`id`, `name`, `logo`, `brand_promote_logo`, `brief`, `sort`, `shop_cate_id`, `brand_promote`, `begin_time`, `end_time`, `time_status`, `dy_count`) VALUES
@@ -474,7 +472,7 @@ INSERT INTO `fanwe_brand` (`id`, `name`, `logo`, `brand_promote_logo`, `brief`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_brand_dy`
+-- 表的结构 `fanwe_brand_dy`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_brand_dy` (
@@ -486,7 +484,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_brand_dy` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_conf`
+-- 表的结构 `fanwe_conf`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_conf` (
@@ -503,7 +501,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_conf` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=177 ;
 
 --
--- Dumping data for table `fanwe_conf`
+-- 转存表中的数据 `fanwe_conf`
 --
 
 INSERT INTO `fanwe_conf` (`id`, `name`, `value`, `group_id`, `input_type`, `value_scope`, `is_effect`, `is_conf`, `sort`) VALUES
@@ -558,7 +556,7 @@ INSERT INTO `fanwe_conf` (`id`, `name`, `value`, `group_id`, `input_type`, `valu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_coupon_log`
+-- 表的结构 `fanwe_coupon_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_coupon_log` (
@@ -573,7 +571,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_coupon_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_daren_submit`
+-- 表的结构 `fanwe_daren_submit`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_daren_submit` (
@@ -589,7 +587,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_daren_submit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal`
+-- 表的结构 `fanwe_deal`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal` (
@@ -656,19 +654,19 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=59 ;
 
 --
--- Dumping data for table `fanwe_deal`
+-- 转存表中的数据 `fanwe_deal`
 --
 
 INSERT INTO `fanwe_deal` (`id`, `name`, `name_match`, `name_match_row`, `image`, `source_vedio`, `vedio`, `deal_days`, `begin_time`, `end_time`, `is_effect`, `limit_price`, `brief`, `description`, `comment_count`, `support_count`, `focus_count`, `view_count`, `log_count`, `support_amount`, `pay_amount`, `delivery_fee_amount`, `create_time`, `seo_title`, `seo_keyword`, `seo_description`, `tags`, `tags_match`, `tags_match_row`, `success_time`, `is_success`, `cate_id`, `province`, `city`, `user_id`, `sort`, `user_name`, `is_recommend`, `is_classic`, `is_delete`) VALUES
-(55, '原创DIY桌面游戏《功夫》《黄金密码》期待您的支持', 'ux21151ux22827,ux26700ux38754,ux26399ux24453,ux23494ux30721,ux40644ux37329,ux25903ux25345,ux21407ux21019,ux28216ux25103,ux68ux73ux89,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345', '功夫,桌面,期待,密码,黄金,支持,原创,游戏,DIY,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持', './public/attachment/201211/07/10/021e2f6812298468cfab78cbd07b90ee85.jpg', '', '', 15, 1351710606, 1383765012, 1, 3000.0000, '这次给大家带来的是我们自己原创的两个桌面游戏《功夫》和《黄金密码》，由于我们并非专业的桌游制作公司，希望大家能够喜欢并支持我们！', '这次给大家带来的是我们自己原创的两个桌面游戏《功夫》和《黄金密码》，由于我们并非专业的桌游制作公司，所以在游戏的美术、包装、宣传等方面都会存在一些不足。但本次带来的两个作品都是我们利用几乎所有的业余时间尽心尽力制作出来的，希望大家能够喜欢并支持我们！<p><br />\r\n</p>\r\n<h3>我想要做什么</h3>\r\n<p>&nbsp; 桌面游戏是一种健康的休闲方式，你不用整天面对电脑的辐射，同时也让你可以不再过度沉迷于虚拟的网络世界中。因为桌面游戏方式的特殊性，能使你更加注重加强与人面对面的交流，提高自己的语言和沟通能力，还可以在现实生活中用这种轻松愉快的休闲方式结交更多的朋友。</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;我们就是这样一群喜爱桌游，同时喜欢设计桌游的年轻人，我们并非专业的桌游制作团队，我们只是凭着对桌游的爱好开始了对桌游设计的探索。我们希望通过努力，将桌游的快乐带给更多喜欢轻松休闲、热爱生活的朋友。但是，我们的资金及能力有限，需要得到大家的帮助与支持，才能实现这样的梦想。也希望您在支持我们的同时收获一份快乐和惊喜！</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;我们这次将原创的桌面游戏《功夫》和《黄金密码》一起放到这里，希望得到大家的支持！&nbsp;&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><br />\r\n<img src="./public/attachment/201211/07/16/da4f6f7e11b249dcf71bf5e9c6a86d8a83o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p>游戏人数：2-4人</p>\r\n<p>适合年龄：8+</p>\r\n<p>游戏时间：10-30分钟</p>\r\n<p>游戏类型：手牌管理</p>\r\n<p>游戏背景：你在游戏中扮演一名武者，灵活运用你掌握的功夫（手牌）和装备（装备牌）对抗其他的武者并最终打败他们。</p>\r\n<p>游戏目标：扣除敌方所有人物的体力为胜。</p>\r\n游戏配件：69张动作牌（手牌）、6张道具牌、2张血量牌（需自行制作）<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/7a404c90f81ca1368ff0f5b24e26a5d781o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p>游戏过程：游戏的每个回合分两个阶段，第一阶段为热身阶段，获得热身阶段胜利的玩家成为第二阶段（攻击阶段）的主导者，由他决定第二阶段如何进行。</p>\r\n<p>&nbsp;&nbsp;&nbsp;《功夫》用卡牌较好的模拟再现了格斗中的一些乐趣，比如热身阶段的猜招、攻击阶段一招一式的过招，同时结合手牌管理的一些特点，打出组合招式及连招，配合你获得的道具，最终战胜对手。在游戏过程中，当你取得一定的优势时，也不能掉以轻心，形式可能会因为你的任何一个破绽而发生逆转，这与格斗、搏击的情况十分相似。所以如何保持良好的心态，灵活的运用手牌才是这个游戏制胜的关键所在。（具体规则见最下方及本项目动态）</p>\r\n<p><br />\r\n</p>\r\n<p><br />\r\n</p>\r\n<p>游戏人数：3-4人</p>\r\n<p>适合年龄：8+</p>\r\n<p>游戏时间：20-40分钟</p>\r\n<p>游戏类型：逻辑推理、谜题设计</p>\r\n<p>游戏背景：二战时期，德军将一批黄金铸成金条，分别保存在3个金库里，并派重兵把守。为了得到这批黄金，美军重金收买了一个德军守卫为内奸，内奸成功获取了金库的密码破解方法，并将密码破解方法以暗号的形式告知了美军特工。但是，与此同时德军也发现了暗号，并且金库的守卫非常森严，解开金库密码的时间只有1分钟……玩家在这个游戏中分别扮演德军、德军内奸、美军特工。如何设计出德军看不懂，美军特工又能在1分钟内解出的暗号密码。就看你的表现啦！</p>\r\n<p>游戏目标：根据身份的不同，任务也不同。德军需解开密码保住金库，特工需设置密码阻止德军解密，美军需解开密码同时选择金库获得黄金。</p>\r\n<p>游戏配件：10张密码牌、12张空箱牌、24张黄金牌、沙漏1个、草稿纸和笔（自备）</p>\r\n<p>游戏过程：每人分别扮演一次特工、德军、美军，完成后计算每人所获得的黄金数量，黄金最多的玩家获胜。</p>\r\n<p><br />\r\n<br />\r\n</p>\r\n<p></p>\r\n', 0, 1, 0, 8, 1, 15.0000, 18.5000, 5.0000, 1413120536, '', '', '', '功夫 桌面 期待 密码 黄金 支持 原创 游戏 DIY', 'ux21151ux22827,ux26700ux38754,ux26399ux24453,ux23494ux30721,ux40644ux37329,ux25903ux25345,ux21407ux21019,ux28216ux25103,ux68ux73ux89', '功夫,桌面,期待,密码,黄金,支持,原创,游戏,DIY', 0, 0, 8, '广东', '佛山', 21, 0, 'myself', 1, 1, 0),
+(55, '原创DIY桌面游戏《功夫》《黄金密码》期待您的支持', 'ux21151ux22827,ux26700ux38754,ux26399ux24453,ux23494ux30721,ux40644ux37329,ux25903ux25345,ux21407ux21019,ux28216ux25103,ux68ux73ux89,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345,ux21407ux21019ux68ux73ux89ux26700ux38754ux28216ux25103ux12298ux21151ux22827ux12299ux12298ux40644ux37329ux23494ux30721ux12299ux26399ux24453ux24744ux30340ux25903ux25345', '功夫,桌面,期待,密码,黄金,支持,原创,游戏,DIY,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持,原创DIY桌面游戏《功夫》《黄金密码》期待您的支持', './public/attachment/201211/07/10/021e2f6812298468cfab78cbd07b90ee85.jpg', '', '', 15, 1351710606, 1383765012, 1, 3000.0000, '这次给大家带来的是我们自己原创的两个桌面游戏《功夫》和《黄金密码》，由于我们并非专业的桌游制作公司，希望大家能够喜欢并支持我们！', '这次给大家带来的是我们自己原创的两个桌面游戏《功夫》和《黄金密码》，由于我们并非专业的桌游制作公司，所以在游戏的美术、包装、宣传等方面都会存在一些不足。但本次带来的两个作品都是我们利用几乎所有的业余时间尽心尽力制作出来的，希望大家能够喜欢并支持我们！<p><br />\r\n</p>\r\n<h3>我想要做什么</h3>\r\n<p>&nbsp; 桌面游戏是一种健康的休闲方式，你不用整天面对电脑的辐射，同时也让你可以不再过度沉迷于虚拟的网络世界中。因为桌面游戏方式的特殊性，能使你更加注重加强与人面对面的交流，提高自己的语言和沟通能力，还可以在现实生活中用这种轻松愉快的休闲方式结交更多的朋友。</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;我们就是这样一群喜爱桌游，同时喜欢设计桌游的年轻人，我们并非专业的桌游制作团队，我们只是凭着对桌游的爱好开始了对桌游设计的探索。我们希望通过努力，将桌游的快乐带给更多喜欢轻松休闲、热爱生活的朋友。但是，我们的资金及能力有限，需要得到大家的帮助与支持，才能实现这样的梦想。也希望您在支持我们的同时收获一份快乐和惊喜！</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;我们这次将原创的桌面游戏《功夫》和《黄金密码》一起放到这里，希望得到大家的支持！&nbsp;&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><br />\r\n<img src="./public/attachment/201211/07/16/da4f6f7e11b249dcf71bf5e9c6a86d8a83o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p>游戏人数：2-4人</p>\r\n<p>适合年龄：8+</p>\r\n<p>游戏时间：10-30分钟</p>\r\n<p>游戏类型：手牌管理</p>\r\n<p>游戏背景：你在游戏中扮演一名武者，灵活运用你掌握的功夫（手牌）和装备（装备牌）对抗其他的武者并最终打败他们。</p>\r\n<p>游戏目标：扣除敌方所有人物的体力为胜。</p>\r\n游戏配件：69张动作牌（手牌）、6张道具牌、2张血量牌（需自行制作）<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/7a404c90f81ca1368ff0f5b24e26a5d781o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p>游戏过程：游戏的每个回合分两个阶段，第一阶段为热身阶段，获得热身阶段胜利的玩家成为第二阶段（攻击阶段）的主导者，由他决定第二阶段如何进行。</p>\r\n<p>&nbsp;&nbsp;&nbsp;《功夫》用卡牌较好的模拟再现了格斗中的一些乐趣，比如热身阶段的猜招、攻击阶段一招一式的过招，同时结合手牌管理的一些特点，打出组合招式及连招，配合你获得的道具，最终战胜对手。在游戏过程中，当你取得一定的优势时，也不能掉以轻心，形式可能会因为你的任何一个破绽而发生逆转，这与格斗、搏击的情况十分相似。所以如何保持良好的心态，灵活的运用手牌才是这个游戏制胜的关键所在。（具体规则见最下方及本项目动态）</p>\r\n<p><br />\r\n</p>\r\n<p><br />\r\n</p>\r\n<p>游戏人数：3-4人</p>\r\n<p>适合年龄：8+</p>\r\n<p>游戏时间：20-40分钟</p>\r\n<p>游戏类型：逻辑推理、谜题设计</p>\r\n<p>游戏背景：二战时期，德军将一批黄金铸成金条，分别保存在3个金库里，并派重兵把守。为了得到这批黄金，美军重金收买了一个德军守卫为内奸，内奸成功获取了金库的密码破解方法，并将密码破解方法以暗号的形式告知了美军特工。但是，与此同时德军也发现了暗号，并且金库的守卫非常森严，解开金库密码的时间只有1分钟……玩家在这个游戏中分别扮演德军、德军内奸、美军特工。如何设计出德军看不懂，美军特工又能在1分钟内解出的暗号密码。就看你的表现啦！</p>\r\n<p>游戏目标：根据身份的不同，任务也不同。德军需解开密码保住金库，特工需设置密码阻止德军解密，美军需解开密码同时选择金库获得黄金。</p>\r\n<p>游戏配件：10张密码牌、12张空箱牌、24张黄金牌、沙漏1个、草稿纸和笔（自备）</p>\r\n<p>游戏过程：每人分别扮演一次特工、德军、美军，完成后计算每人所获得的黄金数量，黄金最多的玩家获胜。</p>\r\n<p><br />\r\n<br />\r\n</p>\r\n<p></p>\r\n', 0, 1, 0, 9, 1, 15.0000, 18.5000, 5.0000, 1413120536, '', '', '', '功夫 桌面 期待 密码 黄金 支持 原创 游戏 DIY', 'ux21151ux22827,ux26700ux38754,ux26399ux24453,ux23494ux30721,ux40644ux37329,ux25903ux25345,ux21407ux21019,ux28216ux25103,ux68ux73ux89', '功夫,桌面,期待,密码,黄金,支持,原创,游戏,DIY', 0, 0, 8, '广东', '佛山', 21, 0, 'myself', 1, 1, 0),
 (56, '拥有自己的咖啡馆', 'ux21654ux21857ux39302,ux25317ux26377,ux33258ux24049,ux25317ux26377ux33258ux24049ux30340ux21654ux21857ux39302', '咖啡馆,拥有,自己,拥有自己的咖啡馆', './public/attachment/201211/07/11/40e44eb97b0ca5aed5148e59c2cc8dcb95.jpg', '', '', 30, 1351711495, 1384975499, 1, 5000.0000, '每个人心目中都有一个属于自己的咖啡馆,我们也是.但我们想要的咖啡馆，又不仅仅是咖啡馆', '<h3>关于我</h3>\r\n<p>每个人心目中都有一个属于自己的咖啡馆<br />\r\n我们也是<br />\r\n但我们想要的咖啡馆，又不仅仅是咖啡馆<br />\r\n这里除了售卖咖啡和甜点，还有旅行的梦想<br />\r\n我们想要一个“窝”，一个无论在出发前还是归来后随时开放的地方<br />\r\n梦想着有一天<br />\r\n我们可以带着咖啡的香气出发<br />\r\n又满载着旅行的收获回到充满咖啡香气的小“窝”</p>\r\n<h3>我想要做什么</h3>\r\n<p>以图文并茂的方式简洁生动地说明你的项目，让大家一目了然，这会决定是否将你的项目描述继续看下去。建议不超过300字。<br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/0482ef5836f6745af0f59ff40d40805765o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />\r\n</p>\r\n<h3>为什么我需要你的支持</h3>\r\n<p>这是加分项。说说你的项目不同寻常的特色、资金用途、以及大家支持你的理由。这会让更多人能够支持你，不超过200个汉字。<br />\r\n<br />\r\n</p>\r\n<h3>我的承诺与回报</h3>\r\n让大家感到你对待项目的认真程度，鞭策你将项目执行最终成功。同时向大家展示一下你为支持者准备的回报，来吸引更多人支持你。<br />\r\n<br />\r\n<img src="./public/attachment/201211/07/16/2ae4c7149cfd31f12d91453713322f9076o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />', 0, 11, 1, 13, 1, 5500.0000, 4950.0000, 0.0000, 1352229954, '', '', '', '咖啡馆 拥有 自己', 'ux21654ux21857ux39302,ux25317ux26377,ux33258ux24049', '咖啡馆,拥有,自己', 1352230293, 1, 1, '北京', '东城区', 18, 0, 'fzmatthew', 1, 1, 0),
-(57, '短片电影《Blind Love》', 'ux30701ux29255,ux30005ux24433,ux66ux108ux105ux110ux100,ux76ux111ux118ux101,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299', '短片,电影,Blind,Love,短片电影《Blind Love》,短片电影《Blind Love》,短片电影《Blind Love》', './public/attachment/201211/07/11/0c067c4522bba51595c324028be7070d11.jpg', 'http://player.youku.com/player.php/sid/XMzgyNjMzNDA4/v.swf', 'http://v.youku.com/v_show/id_XMzgyNjMzNDA4.html', 30, 1349034009, 1383766813, 1, 3000.0000, '我叫武秋辰， 美国圣地亚哥大学影视专业硕士毕业。这是我在毕业后的第一部独立电影作品，讲述了一个关于盲人画家的唯美爱情故事。', '<p>我叫武秋辰， 美国圣地亚哥大学影视专业硕士毕业。这是我在毕业后的第一部独立电影作品，讲述了一个关于盲人画家的唯美爱情故事。</p>\r\n <p>这是一个需要爱与被爱的世界，然而在我们面对这纷繁复杂多变的世界时，我们如何过滤掉那迷乱双眼的尘沙找到真爱？我们在爱中得救，在爱中迷失。我们过度相信我们用双眼所见的，却忘记听从内心最真的感受！<br />\r\n<br />\r\n</p>\r\n<p>我们一路奔跑、一路追逐，生活的洪流把我们涌向未来不确定的方向，我们有着一双能望穿苍穹的眼睛，却不断的迷失在路途中。如果有一天我们的双眼失去光明……<br />\r\n<br />\r\n</p>\r\n<p>真爱是否还遥远？<br />\r\n<br />\r\n</p>\r\n<p>导演武秋辰将用电影语言为我们讲述一位盲人画家的爱情故事，如同她所写道的：“我们视觉正常的人很容易被表象所迷惑，而我们的触觉，听觉和嗅觉却非常的精准，给我们带来更丰富的感知。”当我们不仅凭双眼去认识这个世界的时候，也许答案就在那里！<br />\r\n<br />\r\n</p>\r\n<p>为了使影片更富深入性、更具专业性，导演请来了好莱坞的职业演员，就连剧中的盲人画像也由美国著名画家OlyaLusina特为此片创作。<br />\r\n<br />\r\n</p>\r\n<p>该片不仅是一个远赴美国实现梦想的中国女孩的心血之作，同时也深刻展现了一个盲人心中的世界，从“他”的角度为因爱迷失的人们找到了一个诗意的出口。<br />\r\n<br />\r\n</p>\r\n<p>在这里，真诚地感谢您的关注！关注武秋辰和她的《BlindLove》！<br />\r\n<br />\r\n</p>\r\n<h3>自我介绍<br />\r\n</h3>\r\n<p>我是一个在美国学电影做电影的中国女孩。在美国圣地亚哥大学电影系求学的过程中，我学会了编剧，导演，拍摄和剪辑，参与了几十部电影的创作。“盲爱”是我在硕士毕业后自编自导的第一部独立电影作品。</p>\r\n<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/148cb883cbb170735c331125a96c11e162o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/875016977d65ee2cc679ab0cfd7a7f6620o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />\r\n<br />\r\n</p>\r\n', 0, 0, 0, 12, 1, 0.0000, 0.0000, 0.0000, 1413120495, '', '', '', '短片 电影 Blind Love', 'ux30701ux29255,ux30005ux24433,ux66ux108ux105ux110ux100,ux76ux111ux118ux101', '短片,电影,Blind,Love', 0, 0, 3, '青海', '玉树', 17, 0, 'zhaoyu', 1, 1, 0),
+(57, '短片电影《Blind Love》', 'ux30701ux29255,ux30005ux24433,ux66ux108ux105ux110ux100,ux76ux111ux118ux101,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299,ux30701ux29255ux30005ux24433ux12298ux66ux108ux105ux110ux100ux76ux111ux118ux101ux12299', '短片,电影,Blind,Love,短片电影《Blind Love》,短片电影《Blind Love》,短片电影《Blind Love》', './public/attachment/201211/07/11/0c067c4522bba51595c324028be7070d11.jpg', 'http://player.youku.com/player.php/sid/XMzgyNjMzNDA4/v.swf', 'http://v.youku.com/v_show/id_XMzgyNjMzNDA4.html', 30, 1349034009, 1383766813, 1, 3000.0000, '我叫武秋辰， 美国圣地亚哥大学影视专业硕士毕业。这是我在毕业后的第一部独立电影作品，讲述了一个关于盲人画家的唯美爱情故事。', '<p>我叫武秋辰， 美国圣地亚哥大学影视专业硕士毕业。这是我在毕业后的第一部独立电影作品，讲述了一个关于盲人画家的唯美爱情故事。</p>\r\n <p>这是一个需要爱与被爱的世界，然而在我们面对这纷繁复杂多变的世界时，我们如何过滤掉那迷乱双眼的尘沙找到真爱？我们在爱中得救，在爱中迷失。我们过度相信我们用双眼所见的，却忘记听从内心最真的感受！<br />\r\n<br />\r\n</p>\r\n<p>我们一路奔跑、一路追逐，生活的洪流把我们涌向未来不确定的方向，我们有着一双能望穿苍穹的眼睛，却不断的迷失在路途中。如果有一天我们的双眼失去光明……<br />\r\n<br />\r\n</p>\r\n<p>真爱是否还遥远？<br />\r\n<br />\r\n</p>\r\n<p>导演武秋辰将用电影语言为我们讲述一位盲人画家的爱情故事，如同她所写道的：“我们视觉正常的人很容易被表象所迷惑，而我们的触觉，听觉和嗅觉却非常的精准，给我们带来更丰富的感知。”当我们不仅凭双眼去认识这个世界的时候，也许答案就在那里！<br />\r\n<br />\r\n</p>\r\n<p>为了使影片更富深入性、更具专业性，导演请来了好莱坞的职业演员，就连剧中的盲人画像也由美国著名画家OlyaLusina特为此片创作。<br />\r\n<br />\r\n</p>\r\n<p>该片不仅是一个远赴美国实现梦想的中国女孩的心血之作，同时也深刻展现了一个盲人心中的世界，从“他”的角度为因爱迷失的人们找到了一个诗意的出口。<br />\r\n<br />\r\n</p>\r\n<p>在这里，真诚地感谢您的关注！关注武秋辰和她的《BlindLove》！<br />\r\n<br />\r\n</p>\r\n<h3>自我介绍<br />\r\n</h3>\r\n<p>我是一个在美国学电影做电影的中国女孩。在美国圣地亚哥大学电影系求学的过程中，我学会了编剧，导演，拍摄和剪辑，参与了几十部电影的创作。“盲爱”是我在硕士毕业后自编自导的第一部独立电影作品。</p>\r\n<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/148cb883cbb170735c331125a96c11e162o5700.jpg" rel="0" /><br />\r\n<br />\r\n</p>\r\n<p><br />\r\n</p>\r\n<p><img src="./public/attachment/201211/07/16/875016977d65ee2cc679ab0cfd7a7f6620o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />\r\n<br />\r\n</p>\r\n', 0, 0, 0, 13, 1, 0.0000, 0.0000, 0.0000, 1413120495, '', '', '', '短片 电影 Blind Love', 'ux30701ux29255,ux30005ux24433,ux66ux108ux105ux110ux100,ux76ux111ux118ux101', '短片,电影,Blind,Love', 0, 0, 3, '青海', '玉树', 17, 0, 'zhaoyu', 1, 1, 0),
 (58, '流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！', 'ux21654ux21857ux39302,ux37325ux24314,ux20844ux30410,ux27969ux28010,ux21147ux37327,ux38656ux35201,ux22825ux20351,ux22823ux23478,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281,ux27969ux28010ux29483ux30340ux23478ux8212ux29233ux22825ux20351ux20844ux30410ux21654ux21857ux39302ux30340ux37325ux24314ux38656ux35201ux22823ux23478ux30340ux21147ux37327ux65281', '咖啡馆,重建,公益,流浪,力量,需要,天使,大家,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！,流浪猫的家—爱天使公益咖啡馆的重建需要大家的力量！', './public/attachment/201211/07/11/438813e6d75cb84c6b0df8ffbad7aa8c31.jpg', 'http://player.youku.com/player.php/sid/XMjYwMTc3MDY0/v.swf', 'http://v.youku.com/v_show/id_XMjYwMTc3MDY0.html', 50, 1352145022, 1385668225, 1, 3000.0000, '爱天使成立的猫天使驿站三年多收养救助了两百余只的流浪猫并为它们找到了一个个温暖的家。', '<p>爱天使成立的猫天使驿站三年多收养救助了两百余只的流浪猫并为它们找到了一个个温暖的家。爱天使是一种爱，更是一种生活！坚持个人信念的我一直努力活出这个世上不一般的价值人生。那就是不追求自己能拥有什么而在能为自己以外的生命带去什么。。。爱天使在今年因合同到期而到了转折点，重建是艰辛的却也坚信必将更加强大。</p>\r\n <h3>【关于我】——将救助流浪猫视为自己的事业！</h3>\r\n<p>首先做个自我介绍：</p>\r\n<p>我叫李文婷，英文名ANGELLI。</p>\r\n<p>是一名爱猫如命的“狂热分子”，</p>\r\n<p>作为流浪猫的代理麻麻已收养救助过两百余只猫咪；</p>\r\n<p>00年在大学校园宿舍开始拨号上网的网络生活，</p>\r\n<p>担任系学生会副主席及宣传部长等，</p>\r\n<p>参与系女篮队、校诗朗诵比赛、主持系选举活动，<br />\r\n</p>\r\n<p>组织带领系队作为一辩参加校辩论赛获得季军，</p>\r\n<p>毕业后于厦门海尔及三五互联等公司工作近六年。</p>\r\n<p>工作中一直表现突出主持公司千人晚会并荣获过部门最高荣誉奖。</p>\r\n<p>08年辞去部门经理一职后成为SOHO一族，</p>\r\n<p>经营LA爱天使韩国饰品成为淘宝卖家。</p>\r\n<p>于短短半年间毫无虚假的升为二钻一年后升至三钻，</p>\r\n<p>于09年6月20日在老爸大力的支持下经营爱天使咖啡馆，</p>\r\n<p>于2010年10月创办猫天使驿站正式收养救助流浪猫，</p>\r\n<p>先后接受了海峡导报厦门卫视等媒体及大学生的多次采访报道。<br />\r\n</p>\r\n<p>三年间收养救助了两百余只流浪猫并为它们找到了一个个温暖的家。</p>\r\n<p>与仔仔、全全、QQ、EE四只咪咪一起相伴爱天使救命流浪猫的生活。</p>\r\n<p>爱天使就是流浪猫们的家，是我将用余生为之奋斗的事业！</p>\r\n将“关爱弱小弱势生命，传递爱分享快乐”救助流浪猫视为毕生为之努力的事业。<br />\r\n<br />\r\n<img src="./public/attachment/201211/07/16/dda29128a6310c273da111f1f30296c172o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />\r\n<br />\r\n<img src="./public/attachment/201211/07/16/c7650c3dd93e5585dbfad780ba3bbced31o5700.jpg" rel="0" /><br />\r\n<br />\r\n<br />\r\n', 1, 2, 1, 6, 1, 5000.0000, 4500.0000, 0.0000, 1413120659, '', '', '', '咖啡馆 重建 公益 流浪 力量 需要 天使 大家', 'ux21654ux21857ux39302,ux37325ux24314,ux20844ux30410,ux27969ux28010,ux21147ux37327,ux38656ux35201,ux22825ux20351,ux22823ux23478', '咖啡馆,重建,公益,流浪,力量,需要,天使,大家', 1352231704, 1, 7, '广东', '广州', 17, 0, 'zhaoyu', 1, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_attr`
+-- 表的结构 `fanwe_deal_attr`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_attr` (
@@ -684,7 +682,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_attr` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=223 ;
 
 --
--- Dumping data for table `fanwe_deal_attr`
+-- 转存表中的数据 `fanwe_deal_attr`
 --
 
 INSERT INTO `fanwe_deal_attr` (`id`, `name`, `goods_type_attr_id`, `price`, `deal_id`, `is_checked`) VALUES
@@ -728,7 +726,7 @@ INSERT INTO `fanwe_deal_attr` (`id`, `name`, `goods_type_attr_id`, `price`, `dea
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cart`
+-- 表的结构 `fanwe_deal_cart`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cart` (
@@ -762,36 +760,38 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate`
+-- 表的结构 `fanwe_deal_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `sort` int(11) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `hover_image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=19 ;
 
 --
--- Dumping data for table `fanwe_deal_cate`
+-- 转存表中的数据 `fanwe_deal_cate`
 --
 
-INSERT INTO `fanwe_deal_cate` (`id`, `name`, `sort`) VALUES
-(1, '设计', 1),
-(2, '科技', 2),
-(3, '影视', 3),
-(4, '摄影', 4),
-(5, '音乐', 5),
-(6, '出版', 6),
-(7, '活动', 7),
-(8, '游戏', 8),
-(9, '旅行', 9),
-(10, '其他', 10);
+INSERT INTO `fanwe_deal_cate` (`id`, `name`, `sort`, `image`, `hover_image`) VALUES
+(1, '设计', 1, './public/attachment/201411/13/03/5463ae3c3e3f1.jpg', './public/attachment/201411/13/03/5463b299af81d.jpg'),
+(2, '科技', 2, './public/attachment/201411/13/03/5463aec3ceb7d.jpg', ''),
+(3, '影视', 3, './public/attachment/201411/13/03/5463aefe232b3.jpg', ''),
+(4, '摄影', 4, './public/attachment/201411/13/03/5463af2af0240.jpg', ''),
+(5, '音乐', 5, './public/attachment/201411/13/03/5463af5f916a9.jpg', ''),
+(6, '出版', 6, './public/attachment/201411/13/03/5463af92132b0.jpg', ''),
+(7, '活动', 7, './public/attachment/201411/13/03/5463aff1f1746.jpg', ''),
+(8, '游戏', 8, './public/attachment/201411/13/03/5463b023e5f1f.jpg', ''),
+(9, '旅行', 9, './public/attachment/201411/13/03/5463b055e7604.jpg', ''),
+(10, '其他', 10, './public/attachment/201411/13/03/5463b07221870.jpg', './public/attachment/201411/13/03/5463b078e0c8c.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate_type`
+-- 表的结构 `fanwe_deal_cate_type`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type` (
@@ -803,7 +803,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
--- Dumping data for table `fanwe_deal_cate_type`
+-- 转存表中的数据 `fanwe_deal_cate_type`
 --
 
 INSERT INTO `fanwe_deal_cate_type` (`id`, `name`, `is_recommend`, `sort`) VALUES
@@ -841,7 +841,7 @@ INSERT INTO `fanwe_deal_cate_type` (`id`, `name`, `is_recommend`, `sort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate_type_deal_link`
+-- 表的结构 `fanwe_deal_cate_type_deal_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_deal_link` (
@@ -851,7 +851,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_deal_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_deal_cate_type_deal_link`
+-- 转存表中的数据 `fanwe_deal_cate_type_deal_link`
 --
 
 INSERT INTO `fanwe_deal_cate_type_deal_link` (`deal_id`, `deal_cate_type_id`) VALUES
@@ -870,7 +870,7 @@ INSERT INTO `fanwe_deal_cate_type_deal_link` (`deal_id`, `deal_cate_type_id`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate_type_link`
+-- 表的结构 `fanwe_deal_cate_type_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_link` (
@@ -880,7 +880,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_deal_cate_type_link`
+-- 转存表中的数据 `fanwe_deal_cate_type_link`
 --
 
 INSERT INTO `fanwe_deal_cate_type_link` (`cate_id`, `deal_cate_type_id`) VALUES
@@ -921,7 +921,7 @@ INSERT INTO `fanwe_deal_cate_type_link` (`cate_id`, `deal_cate_type_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate_type_location_link`
+-- 表的结构 `fanwe_deal_cate_type_location_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_location_link` (
@@ -933,7 +933,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_location_link` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_cate_type_youhui_link`
+-- 表的结构 `fanwe_deal_cate_type_youhui_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_youhui_link` (
@@ -943,7 +943,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate_type_youhui_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_deal_cate_type_youhui_link`
+-- 转存表中的数据 `fanwe_deal_cate_type_youhui_link`
 --
 
 INSERT INTO `fanwe_deal_cate_type_youhui_link` (`deal_cate_type_id`, `youhui_id`) VALUES
@@ -963,7 +963,7 @@ INSERT INTO `fanwe_deal_cate_type_youhui_link` (`deal_cate_type_id`, `youhui_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_city`
+-- 表的结构 `fanwe_deal_city`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_city` (
@@ -987,7 +987,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_city` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
--- Dumping data for table `fanwe_deal_city`
+-- 转存表中的数据 `fanwe_deal_city`
 --
 
 INSERT INTO `fanwe_deal_city` (`id`, `name`, `uname`, `is_effect`, `is_delete`, `pid`, `is_open`, `is_default`, `description`, `notice`, `seo_title`, `seo_keyword`, `seo_description`, `sort`) VALUES
@@ -999,7 +999,7 @@ INSERT INTO `fanwe_deal_city` (`id`, `name`, `uname`, `is_effect`, `is_delete`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_collect`
+-- 表的结构 `fanwe_deal_collect`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_collect` (
@@ -1016,7 +1016,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_collect` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_comment`
+-- 表的结构 `fanwe_deal_comment`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_comment` (
@@ -1043,7 +1043,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_comment` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=176 ;
 
 --
--- Dumping data for table `fanwe_deal_comment`
+-- 转存表中的数据 `fanwe_deal_comment`
 --
 
 INSERT INTO `fanwe_deal_comment` (`id`, `deal_id`, `content`, `user_id`, `create_time`, `log_id`, `user_name`, `pid`, `deal_user_id`, `reply_user_id`, `deal_user_name`, `reply_user_name`) VALUES
@@ -1057,7 +1057,7 @@ INSERT INTO `fanwe_deal_comment` (`id`, `deal_id`, `content`, `user_id`, `create
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_coupon`
+-- 表的结构 `fanwe_deal_coupon`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_coupon` (
@@ -1097,7 +1097,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_coupon` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_delivery`
+-- 表的结构 `fanwe_deal_delivery`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_delivery` (
@@ -1110,7 +1110,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_delivery` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_faq`
+-- 表的结构 `fanwe_deal_faq`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_faq` (
@@ -1125,7 +1125,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_faq` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=107 ;
 
 --
--- Dumping data for table `fanwe_deal_faq`
+-- 转存表中的数据 `fanwe_deal_faq`
 --
 
 INSERT INTO `fanwe_deal_faq` (`id`, `deal_id`, `question`, `answer`, `sort`) VALUES
@@ -1138,7 +1138,7 @@ INSERT INTO `fanwe_deal_faq` (`id`, `deal_id`, `question`, `answer`, `sort`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_filter`
+-- 表的结构 `fanwe_deal_filter`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_filter` (
@@ -1150,7 +1150,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_filter` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=120 ;
 
 --
--- Dumping data for table `fanwe_deal_filter`
+-- 转存表中的数据 `fanwe_deal_filter`
 --
 
 INSERT INTO `fanwe_deal_filter` (`id`, `filter`, `deal_id`, `filter_group_id`) VALUES
@@ -1185,7 +1185,7 @@ INSERT INTO `fanwe_deal_filter` (`id`, `filter`, `deal_id`, `filter_group_id`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_focus_log`
+-- 表的结构 `fanwe_deal_focus_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_focus_log` (
@@ -1200,7 +1200,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_focus_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=34 ;
 
 --
--- Dumping data for table `fanwe_deal_focus_log`
+-- 转存表中的数据 `fanwe_deal_focus_log`
 --
 
 INSERT INTO `fanwe_deal_focus_log` (`id`, `deal_id`, `user_id`, `create_time`) VALUES
@@ -1210,7 +1210,7 @@ INSERT INTO `fanwe_deal_focus_log` (`id`, `deal_id`, `user_id`, `create_time`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_gallery`
+-- 表的结构 `fanwe_deal_gallery`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_gallery` (
@@ -1222,7 +1222,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_gallery` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=595 ;
 
 --
--- Dumping data for table `fanwe_deal_gallery`
+-- 转存表中的数据 `fanwe_deal_gallery`
 --
 
 INSERT INTO `fanwe_deal_gallery` (`id`, `img`, `deal_id`, `sort`) VALUES
@@ -1278,7 +1278,7 @@ INSERT INTO `fanwe_deal_gallery` (`id`, `img`, `deal_id`, `sort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_item`
+-- 表的结构 `fanwe_deal_item`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_item` (
@@ -1299,7 +1299,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_item` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=33 ;
 
 --
--- Dumping data for table `fanwe_deal_item`
+-- 转存表中的数据 `fanwe_deal_item`
 --
 
 INSERT INTO `fanwe_deal_item` (`id`, `deal_id`, `price`, `support_count`, `support_amount`, `description`, `is_delivery`, `delivery_fee`, `is_limit_user`, `limit_user`, `repaid_day`) VALUES
@@ -1323,7 +1323,7 @@ INSERT INTO `fanwe_deal_item` (`id`, `deal_id`, `price`, `support_count`, `suppo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_item_image`
+-- 表的结构 `fanwe_deal_item_image`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_item_image` (
@@ -1337,7 +1337,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_item_image` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=59 ;
 
 --
--- Dumping data for table `fanwe_deal_item_image`
+-- 转存表中的数据 `fanwe_deal_item_image`
 --
 
 INSERT INTO `fanwe_deal_item_image` (`id`, `deal_id`, `deal_item_id`, `image`) VALUES
@@ -1364,7 +1364,7 @@ INSERT INTO `fanwe_deal_item_image` (`id`, `deal_id`, `deal_item_id`, `image`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_location_link`
+-- 表的结构 `fanwe_deal_location_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_location_link` (
@@ -1374,7 +1374,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_location_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_deal_location_link`
+-- 转存表中的数据 `fanwe_deal_location_link`
 --
 
 INSERT INTO `fanwe_deal_location_link` (`deal_id`, `location_id`) VALUES
@@ -1393,7 +1393,7 @@ INSERT INTO `fanwe_deal_location_link` (`deal_id`, `location_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_log`
+-- 表的结构 `fanwe_deal_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_log` (
@@ -1412,7 +1412,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=30 ;
 
 --
--- Dumping data for table `fanwe_deal_log`
+-- 转存表中的数据 `fanwe_deal_log`
 --
 
 INSERT INTO `fanwe_deal_log` (`id`, `log_info`, `create_time`, `user_id`, `user_name`, `deal_id`, `image`, `vedio`, `source_vedio`) VALUES
@@ -1424,7 +1424,7 @@ INSERT INTO `fanwe_deal_log` (`id`, `log_info`, `create_time`, `user_id`, `user_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_msg_list`
+-- 表的结构 `fanwe_deal_msg_list`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_msg_list` (
@@ -1448,7 +1448,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_msg_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_notify`
+-- 表的结构 `fanwe_deal_notify`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_notify` (
@@ -1462,7 +1462,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_notify` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_order`
+-- 表的结构 `fanwe_deal_order`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_order` (
@@ -1500,7 +1500,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_order` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=81 ;
 
 --
--- Dumping data for table `fanwe_deal_order`
+-- 转存表中的数据 `fanwe_deal_order`
 --
 
 INSERT INTO `fanwe_deal_order` (`id`, `deal_id`, `deal_item_id`, `user_id`, `user_name`, `pay_time`, `total_price`, `delivery_fee`, `deal_price`, `support_memo`, `payment_id`, `bank_id`, `credit_pay`, `online_pay`, `deal_name`, `order_status`, `create_time`, `consignee`, `zip`, `mobile`, `province`, `city`, `address`, `is_success`, `repay_time`, `repay_memo`, `is_refund`) VALUES
@@ -1524,7 +1524,7 @@ INSERT INTO `fanwe_deal_order` (`id`, `deal_id`, `deal_item_id`, `user_id`, `use
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_order_item`
+-- 表的结构 `fanwe_deal_order_item`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_order_item` (
@@ -1554,7 +1554,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_order_item` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=79 ;
 
 --
--- Dumping data for table `fanwe_deal_order_item`
+-- 转存表中的数据 `fanwe_deal_order_item`
 --
 
 INSERT INTO `fanwe_deal_order_item` (`id`, `deal_id`, `number`, `unit_price`, `total_price`, `delivery_status`, `name`, `return_score`, `return_total_score`, `attr`, `verify_code`, `order_id`, `return_money`, `return_total_money`, `buy_type`, `sub_name`, `attr_str`, `is_balance`, `balance_unit_price`, `balance_memo`, `balance_total_price`, `balance_time`) VALUES
@@ -1563,7 +1563,7 @@ INSERT INTO `fanwe_deal_order_item` (`id`, `deal_id`, `number`, `unit_price`, `t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_order_log`
+-- 表的结构 `fanwe_deal_order_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_order_log` (
@@ -1575,7 +1575,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_order_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=69 ;
 
 --
--- Dumping data for table `fanwe_deal_order_log`
+-- 转存表中的数据 `fanwe_deal_order_log`
 --
 
 INSERT INTO `fanwe_deal_order_log` (`id`, `log_info`, `log_time`, `order_id`) VALUES
@@ -1584,7 +1584,7 @@ INSERT INTO `fanwe_deal_order_log` (`id`, `log_info`, `log_time`, `order_id`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_payment`
+-- 表的结构 `fanwe_deal_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_payment` (
@@ -1597,7 +1597,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_payment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_pay_log`
+-- 表的结构 `fanwe_deal_pay_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_pay_log` (
@@ -1614,7 +1614,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_pay_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_support_log`
+-- 表的结构 `fanwe_deal_support_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_support_log` (
@@ -1632,7 +1632,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_support_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=55 ;
 
 --
--- Dumping data for table `fanwe_deal_support_log`
+-- 转存表中的数据 `fanwe_deal_support_log`
 --
 
 INSERT INTO `fanwe_deal_support_log` (`id`, `deal_id`, `user_id`, `create_time`, `price`, `deal_item_id`) VALUES
@@ -1654,7 +1654,7 @@ INSERT INTO `fanwe_deal_support_log` (`id`, `deal_id`, `user_id`, `create_time`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_deal_visit_log`
+-- 表的结构 `fanwe_deal_visit_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_deal_visit_log` (
@@ -1664,10 +1664,10 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_visit_log` (
   `create_time` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `deal_id` (`deal_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=156 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=158 ;
 
 --
--- Dumping data for table `fanwe_deal_visit_log`
+-- 转存表中的数据 `fanwe_deal_visit_log`
 --
 
 INSERT INTO `fanwe_deal_visit_log` (`id`, `deal_id`, `client_ip`, `create_time`) VALUES
@@ -1709,12 +1709,14 @@ INSERT INTO `fanwe_deal_visit_log` (`id`, `deal_id`, `client_ip`, `create_time`)
 (152, 57, '127.0.0.1', 1413120583),
 (153, 57, '127.0.0.1', 1413195260),
 (154, 57, '127.0.0.1', 1413196147),
-(155, 56, '127.0.0.1', 1413196700);
+(155, 56, '127.0.0.1', 1413196700),
+(156, 55, '127.0.0.1', 1414674421),
+(157, 57, '127.0.0.1', 1415543892);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_delivery`
+-- 表的结构 `fanwe_delivery`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_delivery` (
@@ -1733,7 +1735,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_delivery` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `fanwe_delivery`
+-- 转存表中的数据 `fanwe_delivery`
 --
 
 INSERT INTO `fanwe_delivery` (`id`, `name`, `description`, `first_fee`, `allow_default`, `sort`, `first_weight`, `continue_weight`, `continue_fee`, `weight_id`, `is_effect`) VALUES
@@ -1742,7 +1744,7 @@ INSERT INTO `fanwe_delivery` (`id`, `name`, `description`, `first_fee`, `allow_d
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_delivery_fee`
+-- 表的结构 `fanwe_delivery_fee`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_delivery_fee` (
@@ -1757,7 +1759,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_delivery_fee` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
--- Dumping data for table `fanwe_delivery_fee`
+-- 转存表中的数据 `fanwe_delivery_fee`
 --
 
 INSERT INTO `fanwe_delivery_fee` (`id`, `delivery_id`, `region_ids`, `first_fee`, `first_weight`, `continue_fee`, `continue_weight`) VALUES
@@ -1766,7 +1768,7 @@ INSERT INTO `fanwe_delivery_fee` (`id`, `delivery_id`, `region_ids`, `first_fee`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_delivery_notice`
+-- 表的结构 `fanwe_delivery_notice`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_delivery_notice` (
@@ -1785,7 +1787,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_delivery_notice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_delivery_region`
+-- 表的结构 `fanwe_delivery_region`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_delivery_region` (
@@ -1797,7 +1799,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_delivery_region` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3402 ;
 
 --
--- Dumping data for table `fanwe_delivery_region`
+-- 转存表中的数据 `fanwe_delivery_region`
 --
 
 INSERT INTO `fanwe_delivery_region` (`id`, `pid`, `name`, `region_level`) VALUES
@@ -5206,7 +5208,7 @@ INSERT INTO `fanwe_delivery_region` (`id`, `pid`, `name`, `region_level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_ecv`
+-- 表的结构 `fanwe_ecv`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_ecv` (
@@ -5227,7 +5229,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_ecv` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_ecv_type`
+-- 表的结构 `fanwe_ecv_type`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_ecv_type` (
@@ -5247,7 +5249,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_ecv_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event`
+-- 表的结构 `fanwe_event`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event` (
@@ -5288,7 +5290,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_event`
+-- 转存表中的数据 `fanwe_event`
 --
 
 INSERT INTO `fanwe_event` (`id`, `name`, `icon`, `event_begin_time`, `event_end_time`, `submit_begin_time`, `submit_end_time`, `user_id`, `content`, `cate_id`, `city_id`, `address`, `xpoint`, `ypoint`, `locate_match`, `locate_match_row`, `cate_match`, `cate_match_row`, `name_match`, `name_match_row`, `submit_count`, `reply_count`, `brief`, `sort`, `is_effect`, `click_count`, `is_recommend`, `supplier_id`, `publish_wait`) VALUES
@@ -5297,7 +5299,7 @@ INSERT INTO `fanwe_event` (`id`, `name`, `icon`, `event_begin_time`, `event_end_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_area_link`
+-- 表的结构 `fanwe_event_area_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_area_link` (
@@ -5307,7 +5309,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_area_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_event_area_link`
+-- 转存表中的数据 `fanwe_event_area_link`
 --
 
 INSERT INTO `fanwe_event_area_link` (`event_id`, `area_id`) VALUES
@@ -5325,7 +5327,7 @@ INSERT INTO `fanwe_event_area_link` (`event_id`, `area_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_cate`
+-- 表的结构 `fanwe_event_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_cate` (
@@ -5338,7 +5340,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_cate` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `fanwe_event_cate`
+-- 转存表中的数据 `fanwe_event_cate`
 --
 
 INSERT INTO `fanwe_event_cate` (`id`, `name`, `is_effect`, `sort`, `count`) VALUES
@@ -5351,7 +5353,7 @@ INSERT INTO `fanwe_event_cate` (`id`, `name`, `is_effect`, `sort`, `count`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_field`
+-- 表的结构 `fanwe_event_field`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_field` (
@@ -5365,7 +5367,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_field` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `fanwe_event_field`
+-- 转存表中的数据 `fanwe_event_field`
 --
 
 INSERT INTO `fanwe_event_field` (`id`, `event_id`, `field_show_name`, `field_type`, `value_scope`, `sort`) VALUES
@@ -5377,7 +5379,7 @@ INSERT INTO `fanwe_event_field` (`id`, `event_id`, `field_show_name`, `field_typ
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_location_link`
+-- 表的结构 `fanwe_event_location_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_location_link` (
@@ -5387,7 +5389,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_location_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_event_location_link`
+-- 转存表中的数据 `fanwe_event_location_link`
 --
 
 INSERT INTO `fanwe_event_location_link` (`event_id`, `location_id`) VALUES
@@ -5396,7 +5398,7 @@ INSERT INTO `fanwe_event_location_link` (`event_id`, `location_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_submit`
+-- 表的结构 `fanwe_event_submit`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_submit` (
@@ -5408,7 +5410,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_submit` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_event_submit`
+-- 转存表中的数据 `fanwe_event_submit`
 --
 
 INSERT INTO `fanwe_event_submit` (`id`, `user_id`, `create_time`, `event_id`) VALUES
@@ -5417,7 +5419,7 @@ INSERT INTO `fanwe_event_submit` (`id`, `user_id`, `create_time`, `event_id`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_event_submit_field`
+-- 表的结构 `fanwe_event_submit_field`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_event_submit_field` (
@@ -5429,7 +5431,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_event_submit_field` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_event_submit_field`
+-- 转存表中的数据 `fanwe_event_submit_field`
 --
 
 INSERT INTO `fanwe_event_submit_field` (`submit_id`, `field_id`, `result`, `event_id`) VALUES
@@ -5441,7 +5443,7 @@ INSERT INTO `fanwe_event_submit_field` (`submit_id`, `field_id`, `result`, `even
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_express`
+-- 表的结构 `fanwe_express`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_express` (
@@ -5457,7 +5459,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_express` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_expression`
+-- 表的结构 `fanwe_expression`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_expression` (
@@ -5470,7 +5472,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_expression` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=135 ;
 
 --
--- Dumping data for table `fanwe_expression`
+-- 转存表中的数据 `fanwe_expression`
 --
 
 INSERT INTO `fanwe_expression` (`id`, `title`, `type`, `emotion`, `filename`) VALUES
@@ -5592,7 +5594,7 @@ INSERT INTO `fanwe_expression` (`id`, `title`, `type`, `emotion`, `filename`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_faq`
+-- 表的结构 `fanwe_faq`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_faq` (
@@ -5607,7 +5609,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_faq` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=21 ;
 
 --
--- Dumping data for table `fanwe_faq`
+-- 转存表中的数据 `fanwe_faq`
 --
 
 INSERT INTO `fanwe_faq` (`id`, `group`, `question`, `answer`, `sort`) VALUES
@@ -5635,7 +5637,7 @@ INSERT INTO `fanwe_faq` (`id`, `group`, `question`, `answer`, `sort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_fetch_topic`
+-- 表的结构 `fanwe_fetch_topic`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_fetch_topic` (
@@ -5651,7 +5653,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_fetch_topic` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_fetch_topic`
+-- 转存表中的数据 `fanwe_fetch_topic`
 --
 
 INSERT INTO `fanwe_fetch_topic` (`id`, `name`, `show_name`, `class_name`, `icon`, `config`, `is_effect`, `sort`) VALUES
@@ -5660,7 +5662,7 @@ INSERT INTO `fanwe_fetch_topic` (`id`, `name`, `show_name`, `class_name`, `icon`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_filter`
+-- 表的结构 `fanwe_filter`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_filter` (
@@ -5673,7 +5675,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_filter` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=38 ;
 
 --
--- Dumping data for table `fanwe_filter`
+-- 转存表中的数据 `fanwe_filter`
 --
 
 INSERT INTO `fanwe_filter` (`id`, `name`, `filter_group_id`) VALUES
@@ -5700,7 +5702,7 @@ INSERT INTO `fanwe_filter` (`id`, `name`, `filter_group_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_filter_group`
+-- 表的结构 `fanwe_filter_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_filter_group` (
@@ -5713,7 +5715,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_filter_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `fanwe_filter_group`
+-- 转存表中的数据 `fanwe_filter_group`
 --
 
 INSERT INTO `fanwe_filter_group` (`id`, `name`, `cate_id`, `sort`, `is_effect`) VALUES
@@ -5724,7 +5726,7 @@ INSERT INTO `fanwe_filter_group` (`id`, `name`, `cate_id`, `sort`, `is_effect`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_flower_log`
+-- 表的结构 `fanwe_flower_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_flower_log` (
@@ -5740,7 +5742,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_flower_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_free_delivery`
+-- 表的结构 `fanwe_free_delivery`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_free_delivery` (
@@ -5754,7 +5756,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_free_delivery` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_goods_type`
+-- 表的结构 `fanwe_goods_type`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_goods_type` (
@@ -5764,7 +5766,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_goods_type` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `fanwe_goods_type`
+-- 转存表中的数据 `fanwe_goods_type`
 --
 
 INSERT INTO `fanwe_goods_type` (`id`, `name`) VALUES
@@ -5773,7 +5775,7 @@ INSERT INTO `fanwe_goods_type` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_goods_type_attr`
+-- 表的结构 `fanwe_goods_type_attr`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_goods_type_attr` (
@@ -5786,7 +5788,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_goods_type_attr` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
--- Dumping data for table `fanwe_goods_type_attr`
+-- 转存表中的数据 `fanwe_goods_type_attr`
 --
 
 INSERT INTO `fanwe_goods_type_attr` (`id`, `name`, `input_type`, `preset_value`, `goods_type_id`) VALUES
@@ -5796,7 +5798,7 @@ INSERT INTO `fanwe_goods_type_attr` (`id`, `name`, `input_type`, `preset_value`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_help`
+-- 表的结构 `fanwe_help`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_help` (
@@ -5812,7 +5814,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_help` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `fanwe_help`
+-- 转存表中的数据 `fanwe_help`
 --
 
 INSERT INTO `fanwe_help` (`id`, `title`, `content`, `type`, `url`, `is_fix`, `sort`) VALUES
@@ -5824,7 +5826,7 @@ INSERT INTO `fanwe_help` (`id`, `title`, `content`, `type`, `url`, `is_fix`, `so
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_images_group`
+-- 表的结构 `fanwe_images_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_images_group` (
@@ -5835,7 +5837,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_images_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_images_group`
+-- 转存表中的数据 `fanwe_images_group`
 --
 
 INSERT INTO `fanwe_images_group` (`id`, `name`, `sort`) VALUES
@@ -5846,7 +5848,7 @@ INSERT INTO `fanwe_images_group` (`id`, `name`, `sort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_images_group_link`
+-- 表的结构 `fanwe_images_group_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_images_group_link` (
@@ -5857,7 +5859,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_images_group_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_images_group_link`
+-- 转存表中的数据 `fanwe_images_group_link`
 --
 
 INSERT INTO `fanwe_images_group_link` (`images_group_id`, `category_id`) VALUES
@@ -5877,7 +5879,7 @@ INSERT INTO `fanwe_images_group_link` (`images_group_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_index_image`
+-- 表的结构 `fanwe_index_image`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_index_image` (
@@ -5890,7 +5892,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_index_image` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `fanwe_index_image`
+-- 转存表中的数据 `fanwe_index_image`
 --
 
 INSERT INTO `fanwe_index_image` (`id`, `image`, `url`, `sort`, `title`) VALUES
@@ -5901,7 +5903,7 @@ INSERT INTO `fanwe_index_image` (`id`, `image`, `url`, `sort`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_link`
+-- 表的结构 `fanwe_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_link` (
@@ -5919,7 +5921,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_link` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `fanwe_link`
+-- 转存表中的数据 `fanwe_link`
 --
 
 INSERT INTO `fanwe_link` (`id`, `name`, `group_id`, `url`, `is_effect`, `sort`, `img`, `description`, `count`, `show_index`) VALUES
@@ -5929,7 +5931,7 @@ INSERT INTO `fanwe_link` (`id`, `name`, `group_id`, `url`, `is_effect`, `sort`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_link_group`
+-- 表的结构 `fanwe_link_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_link_group` (
@@ -5941,7 +5943,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_link_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `fanwe_link_group`
+-- 转存表中的数据 `fanwe_link_group`
 --
 
 INSERT INTO `fanwe_link_group` (`id`, `name`, `sort`, `is_effect`) VALUES
@@ -5950,7 +5952,7 @@ INSERT INTO `fanwe_link_group` (`id`, `name`, `sort`, `is_effect`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_log`
+-- 表的结构 `fanwe_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_log` (
@@ -5963,10 +5965,10 @@ CREATE TABLE IF NOT EXISTS `fanwe_log` (
   `module` varchar(255) NOT NULL,
   `action` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2439 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2508 ;
 
 --
--- Dumping data for table `fanwe_log`
+-- 转存表中的数据 `fanwe_log`
 --
 
 INSERT INTO `fanwe_log` (`id`, `log_info`, `log_time`, `log_admin`, `log_ip`, `log_status`, `module`, `action`) VALUES
@@ -6019,12 +6021,81 @@ INSERT INTO `fanwe_log` (`id`, `log_info`, `log_time`, `log_admin`, `log_ip`, `l
 (2435, 'admin登录成功', 1413195328, 1, '127.0.0.1', 1, 'Public', 'do_login'),
 (2436, '支付宝即时到帐支付安装成功', 1414651290, 1, '127.0.0.1', 1, 'Payment', 'insert'),
 (2437, '财付通直连支付安装成功', 1414651309, 1, '127.0.0.1', 1, 'Payment', 'insert'),
-(2438, '财付通支付安装成功', 1414651315, 1, '127.0.0.1', 1, 'Payment', 'insert');
+(2438, '财付通支付安装成功', 1414651315, 1, '127.0.0.1', 1, 'Payment', 'insert'),
+(2439, 'admin登录成功', 1414673075, 1, '127.0.0.1', 1, 'Public', 'do_login'),
+(2440, 'admin登录成功', 1415542597, 1, '127.0.0.1', 1, 'Public', 'do_login'),
+(2441, '更新成功', 1415543335, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2442, '测试添加成功', 1415545412, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2443, '更新成功', 1415545437, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2444, '更新成功', 1415548477, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2445, '更新成功', 1415548852, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2446, '更新成功', 1415548996, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2447, '测试2添加成功', 1415549157, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2448, '更新成功', 1415549203, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2449, '更新成功', 1415549264, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2450, '更新成功', 1415549296, 1, '127.0.0.1', 1, 'IndexImage', 'update'),
+(2451, '测试3添加成功', 1415549879, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2452, '测试3彻底删除成功', 1415549893, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2453, '测试3添加成功', 1415549896, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2454, '测试4添加成功', 1415549933, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2455, '测试5添加成功', 1415549940, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2456, '测试5彻底删除成功', 1415549947, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2457, '测试4彻底删除成功', 1415549948, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2458, '测试3彻底删除成功', 1415549950, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2459, '测试4添加成功', 1415550355, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2460, '测试4彻底删除成功', 1415550408, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2461, '测试4添加成功', 1415550411, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2462, '更新失败', 1415605972, 1, '127.0.0.1', 0, 'DealCate', 'update'),
+(2463, '更新失败', 1415606015, 1, '127.0.0.1', 0, 'DealCate', 'update'),
+(2464, '更新失败', 1415606024, 1, '127.0.0.1', 0, 'DealCate', 'update'),
+(2465, '测试更新成功', 1415606056, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2466, 'lweho更新成功', 1415606091, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2467, '测试更新成功', 1415606989, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2468, '测试更新成功', 1415623441, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2469, '测试24更新成功', 1415623469, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2470, '测试242更新成功', 1415623947, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2471, '测试242更新成功', 1415624434, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2472, '测试242更新成功', 1415624439, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2473, '测试242更新成功', 1415676592, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2474, '测试242更新成功', 1415677681, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2475, '测试242更新成功', 1415691164, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2476, '测试242更新成功', 1415691494, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2477, 'test管理员帐号错误', 1415691818, 0, '127.0.0.1', 0, 'Public', 'do_login'),
+(2478, 'test管理员帐号错误', 1415691824, 0, '127.0.0.1', 0, 'Public', 'do_login'),
+(2479, 'admin登录成功', 1415691829, 1, '127.0.0.1', 1, 'Public', 'do_login'),
+(2480, '测试242更新成功', 1415691896, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2481, '测试242更新成功', 1415691900, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2482, '测试242更新成功', 1415691902, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2483, '测试242更新成功', 1415691934, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2484, '测试242更新成功', 1415691991, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2485, '测试242更新成功', 1415692001, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2486, '测试242更新成功', 1415692052, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2487, '测试242更新成功', 1415692057, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2488, '测试242更新成功', 1415692067, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2489, '测试242更新成功', 1415692176, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2490, '测试242更新成功', 1415693140, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2491, '测试242更新成功', 1415693296, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2492, '测试242更新成功', 1415693420, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2493, '测试242更新成功', 1415693582, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2494, '设计更新成功', 1415790017, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2495, '科技更新成功', 1415790149, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2496, '影视更新成功', 1415790207, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2497, '摄影更新成功', 1415790252, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2498, '音乐更新成功', 1415790305, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2499, '出版更新成功', 1415790354, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2500, '测试242彻底删除成功', 1415790385, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2501, '测试2彻底删除成功', 1415790387, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2502, '测试4彻底删除成功', 1415790389, 1, '127.0.0.1', 1, 'DealCate', 'foreverdelete'),
+(2503, '活动更新成功', 1415790451, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2504, '游戏更新成功', 1415790501, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2505, '旅行更新成功', 1415790551, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2506, '其他更新成功', 1415790585, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2507, '设计更新成功', 1415791131, 1, '127.0.0.1', 1, 'DealCate', 'update');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_lottery`
+-- 表的结构 `fanwe_lottery`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_lottery` (
@@ -6041,7 +6112,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_lottery` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_mail_list`
+-- 表的结构 `fanwe_mail_list`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_mail_list` (
@@ -6057,7 +6128,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_mail_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_mail_server`
+-- 表的结构 `fanwe_mail_server`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_mail_server` (
@@ -6078,7 +6149,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_mail_server` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_medal`
+-- 表的结构 `fanwe_medal`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_medal` (
@@ -6096,7 +6167,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_medal` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `fanwe_medal`
+-- 转存表中的数据 `fanwe_medal`
 --
 
 INSERT INTO `fanwe_medal` (`id`, `class_name`, `name`, `description`, `is_effect`, `config`, `icon`, `image`, `route`, `allow_check`) VALUES
@@ -6109,7 +6180,7 @@ INSERT INTO `fanwe_medal` (`id`, `class_name`, `name`, `description`, `is_effect
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_message`
+-- 表的结构 `fanwe_message`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_message` (
@@ -6134,7 +6205,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_message` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
 
 --
--- Dumping data for table `fanwe_message`
+-- 转存表中的数据 `fanwe_message`
 --
 
 INSERT INTO `fanwe_message` (`id`, `title`, `content`, `create_time`, `update_time`, `admin_reply`, `admin_id`, `rel_table`, `rel_id`, `user_id`, `pid`, `is_effect`, `city_id`, `is_buy`, `contact_name`, `contact`, `point`) VALUES
@@ -6143,7 +6214,7 @@ INSERT INTO `fanwe_message` (`id`, `title`, `content`, `create_time`, `update_ti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_message_type`
+-- 表的结构 `fanwe_message_type`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_message_type` (
@@ -6157,7 +6228,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_message_type` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `fanwe_message_type`
+-- 转存表中的数据 `fanwe_message_type`
 --
 
 INSERT INTO `fanwe_message_type` (`id`, `type_name`, `is_fix`, `show_name`, `is_effect`, `sort`) VALUES
@@ -6173,7 +6244,7 @@ INSERT INTO `fanwe_message_type` (`id`, `type_name`, `is_fix`, `show_name`, `is_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_mobile_list`
+-- 表的结构 `fanwe_mobile_list`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_mobile_list` (
@@ -6189,7 +6260,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_mobile_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_msg_box`
+-- 表的结构 `fanwe_msg_box`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_msg_box` (
@@ -6209,7 +6280,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_msg_box` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `fanwe_msg_box`
+-- 转存表中的数据 `fanwe_msg_box`
 --
 
 INSERT INTO `fanwe_msg_box` (`id`, `title`, `content`, `from_user_id`, `to_user_id`, `create_time`, `is_read`, `is_delete`, `system_msg_id`, `type`, `group_key`, `is_notice`) VALUES
@@ -6219,7 +6290,7 @@ INSERT INTO `fanwe_msg_box` (`id`, `title`, `content`, `from_user_id`, `to_user_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_msg_system`
+-- 表的结构 `fanwe_msg_system`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_msg_system` (
@@ -6236,7 +6307,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_msg_system` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_msg_template`
+-- 表的结构 `fanwe_msg_template`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_msg_template` (
@@ -6249,7 +6320,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_msg_template` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_msg_template`
+-- 转存表中的数据 `fanwe_msg_template`
 --
 
 INSERT INTO `fanwe_msg_template` (`id`, `name`, `content`, `type`, `is_html`) VALUES
@@ -6258,7 +6329,7 @@ INSERT INTO `fanwe_msg_template` (`id`, `name`, `content`, `type`, `is_html`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_m_adv`
+-- 表的结构 `fanwe_m_adv`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_m_adv` (
@@ -6275,7 +6346,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_m_adv` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `fanwe_m_adv`
+-- 转存表中的数据 `fanwe_m_adv`
 --
 
 INSERT INTO `fanwe_m_adv` (`id`, `name`, `img`, `page`, `type`, `data`, `sort`, `status`, `city_id`) VALUES
@@ -6288,7 +6359,7 @@ INSERT INTO `fanwe_m_adv` (`id`, `name`, `img`, `page`, `type`, `data`, `sort`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_m_config`
+-- 表的结构 `fanwe_m_config`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_m_config` (
@@ -6301,7 +6372,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_m_config` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
--- Dumping data for table `fanwe_m_config`
+-- 转存表中的数据 `fanwe_m_config`
 --
 
 INSERT INTO `fanwe_m_config` (`id`, `code`, `title`, `val`, `type`) VALUES
@@ -6331,7 +6402,7 @@ INSERT INTO `fanwe_m_config` (`id`, `code`, `title`, `val`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_m_config_list`
+-- 表的结构 `fanwe_m_config_list`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_m_config_list` (
@@ -6347,7 +6418,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_m_config_list` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `fanwe_m_config_list`
+-- 转存表中的数据 `fanwe_m_config_list`
 --
 
 INSERT INTO `fanwe_m_config_list` (`id`, `pay_id`, `group`, `code`, `title`, `has_calc`, `money`, `is_verify`) VALUES
@@ -6359,7 +6430,7 @@ INSERT INTO `fanwe_m_config_list` (`id`, `pay_id`, `group`, `code`, `title`, `ha
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_m_index`
+-- 表的结构 `fanwe_m_index`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_m_index` (
@@ -6379,7 +6450,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_m_index` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
--- Dumping data for table `fanwe_m_index`
+-- 转存表中的数据 `fanwe_m_index`
 --
 
 INSERT INTO `fanwe_m_index` (`id`, `name`, `vice_name`, `desc`, `img`, `type`, `data`, `sort`, `status`, `is_hot`, `is_new`, `city_id`) VALUES
@@ -6391,7 +6462,7 @@ INSERT INTO `fanwe_m_index` (`id`, `name`, `vice_name`, `desc`, `img`, `type`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_nav`
+-- 表的结构 `fanwe_nav`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_nav` (
@@ -6409,7 +6480,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_nav` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=50 ;
 
 --
--- Dumping data for table `fanwe_nav`
+-- 转存表中的数据 `fanwe_nav`
 --
 
 INSERT INTO `fanwe_nav` (`id`, `name`, `url`, `blank`, `sort`, `is_effect`, `u_module`, `u_action`, `u_id`, `u_param`) VALUES
@@ -6421,7 +6492,7 @@ INSERT INTO `fanwe_nav` (`id`, `name`, `url`, `blank`, `sort`, `is_effect`, `u_m
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_payment`
+-- 表的结构 `fanwe_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_payment` (
@@ -6439,7 +6510,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_payment` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=28 ;
 
 --
--- Dumping data for table `fanwe_payment`
+-- 转存表中的数据 `fanwe_payment`
 --
 
 INSERT INTO `fanwe_payment` (`id`, `class_name`, `is_effect`, `online_pay`, `name`, `description`, `total_amount`, `config`, `logo`, `sort`) VALUES
@@ -6451,7 +6522,7 @@ INSERT INTO `fanwe_payment` (`id`, `class_name`, `is_effect`, `online_pay`, `nam
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_payment_notice`
+-- 表的结构 `fanwe_payment_notice`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_payment_notice` (
@@ -6479,7 +6550,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_payment_notice` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=204 ;
 
 --
--- Dumping data for table `fanwe_payment_notice`
+-- 转存表中的数据 `fanwe_payment_notice`
 --
 
 INSERT INTO `fanwe_payment_notice` (`id`, `notice_sn`, `create_time`, `pay_time`, `order_id`, `is_paid`, `user_id`, `payment_id`, `bank_id`, `memo`, `money`, `outer_notice_sn`, `deal_id`, `deal_item_id`, `deal_name`) VALUES
@@ -6491,7 +6562,7 @@ INSERT INTO `fanwe_payment_notice` (`id`, `notice_sn`, `create_time`, `pay_time`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_point_group`
+-- 表的结构 `fanwe_point_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_point_group` (
@@ -6502,7 +6573,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_point_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `fanwe_point_group`
+-- 转存表中的数据 `fanwe_point_group`
 --
 
 INSERT INTO `fanwe_point_group` (`id`, `name`, `sort`) VALUES
@@ -6512,7 +6583,7 @@ INSERT INTO `fanwe_point_group` (`id`, `name`, `sort`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_point_group_link`
+-- 表的结构 `fanwe_point_group_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_point_group_link` (
@@ -6523,7 +6594,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_point_group_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_point_group_link`
+-- 转存表中的数据 `fanwe_point_group_link`
 --
 
 INSERT INTO `fanwe_point_group_link` (`point_group_id`, `category_id`) VALUES
@@ -6545,7 +6616,7 @@ INSERT INTO `fanwe_point_group_link` (`point_group_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_promote`
+-- 表的结构 `fanwe_promote`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_promote` (
@@ -6560,7 +6631,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_promote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_promote_msg`
+-- 表的结构 `fanwe_promote_msg`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_promote_msg` (
@@ -6581,7 +6652,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_promote_msg` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_promote_msg_list`
+-- 表的结构 `fanwe_promote_msg_list`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_promote_msg_list` (
@@ -6605,7 +6676,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_promote_msg_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_referrals`
+-- 表的结构 `fanwe_referrals`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_referrals` (
@@ -6623,7 +6694,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_referrals` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_region_conf`
+-- 表的结构 `fanwe_region_conf`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_region_conf` (
@@ -6636,7 +6707,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_region_conf` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=3401 ;
 
 --
--- Dumping data for table `fanwe_region_conf`
+-- 转存表中的数据 `fanwe_region_conf`
 --
 
 INSERT INTO `fanwe_region_conf` (`id`, `pid`, `name`, `region_level`, `py`) VALUES
@@ -7165,7 +7236,7 @@ INSERT INTO `fanwe_region_conf` (`id`, `pid`, `name`, `region_level`, `py`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_remind_count`
+-- 表的结构 `fanwe_remind_count`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_remind_count` (
@@ -7190,7 +7261,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_remind_count` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_remind_count`
+-- 转存表中的数据 `fanwe_remind_count`
 --
 
 INSERT INTO `fanwe_remind_count` (`id`, `topic_count`, `topic_count_time`, `dp_count`, `dp_count_time`, `msg_count`, `msg_count_time`, `buy_msg_count`, `buy_msg_count_time`, `order_count`, `order_count_time`, `refund_count`, `refund_count_time`, `retake_count`, `retake_count_time`, `incharge_count`, `incharge_count_time`) VALUES
@@ -7199,7 +7270,7 @@ INSERT INTO `fanwe_remind_count` (`id`, `topic_count`, `topic_count_time`, `dp_c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role`
+-- 表的结构 `fanwe_role`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role` (
@@ -7211,7 +7282,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `fanwe_role`
+-- 转存表中的数据 `fanwe_role`
 --
 
 INSERT INTO `fanwe_role` (`id`, `name`, `is_effect`, `is_delete`) VALUES
@@ -7220,7 +7291,7 @@ INSERT INTO `fanwe_role` (`id`, `name`, `is_effect`, `is_delete`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role_access`
+-- 表的结构 `fanwe_role_access`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role_access` (
@@ -7234,7 +7305,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role_access` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role_group`
+-- 表的结构 `fanwe_role_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role_group` (
@@ -7248,7 +7319,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=79 ;
 
 --
--- Dumping data for table `fanwe_role_group`
+-- 转存表中的数据 `fanwe_role_group`
 --
 
 INSERT INTO `fanwe_role_group` (`id`, `name`, `nav_id`, `is_delete`, `is_effect`, `sort`) VALUES
@@ -7276,7 +7347,7 @@ INSERT INTO `fanwe_role_group` (`id`, `name`, `nav_id`, `is_delete`, `is_effect`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role_module`
+-- 表的结构 `fanwe_role_module`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role_module` (
@@ -7289,7 +7360,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role_module` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=127 ;
 
 --
--- Dumping data for table `fanwe_role_module`
+-- 转存表中的数据 `fanwe_role_module`
 --
 
 INSERT INTO `fanwe_role_module` (`id`, `module`, `name`, `is_effect`, `is_delete`) VALUES
@@ -7324,7 +7395,7 @@ INSERT INTO `fanwe_role_module` (`id`, `module`, `name`, `is_effect`, `is_delete
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role_nav`
+-- 表的结构 `fanwe_role_nav`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role_nav` (
@@ -7337,7 +7408,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role_nav` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=15 ;
 
 --
--- Dumping data for table `fanwe_role_nav`
+-- 转存表中的数据 `fanwe_role_nav`
 --
 
 INSERT INTO `fanwe_role_nav` (`id`, `name`, `is_delete`, `is_effect`, `sort`) VALUES
@@ -7351,7 +7422,7 @@ INSERT INTO `fanwe_role_nav` (`id`, `name`, `is_delete`, `is_effect`, `sort`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_role_node`
+-- 表的结构 `fanwe_role_node`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_role_node` (
@@ -7366,7 +7437,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_role_node` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=667 ;
 
 --
--- Dumping data for table `fanwe_role_node`
+-- 转存表中的数据 `fanwe_role_node`
 --
 
 INSERT INTO `fanwe_role_node` (`id`, `action`, `name`, `is_effect`, `is_delete`, `group_id`, `module_id`) VALUES
@@ -7510,7 +7581,7 @@ INSERT INTO `fanwe_role_node` (`id`, `action`, `name`, `is_effect`, `is_delete`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_shop_cate`
+-- 表的结构 `fanwe_shop_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_shop_cate` (
@@ -7529,7 +7600,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_shop_cate` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
 
 --
--- Dumping data for table `fanwe_shop_cate`
+-- 转存表中的数据 `fanwe_shop_cate`
 --
 
 INSERT INTO `fanwe_shop_cate` (`id`, `name`, `brief`, `pid`, `is_delete`, `is_effect`, `sort`, `uname`, `recommend`) VALUES
@@ -7548,7 +7619,7 @@ INSERT INTO `fanwe_shop_cate` (`id`, `name`, `brief`, `pid`, `is_delete`, `is_ef
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_sms`
+-- 表的结构 `fanwe_sms`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_sms` (
@@ -7567,7 +7638,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_sms` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier`
+-- 表的结构 `fanwe_supplier`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier` (
@@ -7593,7 +7664,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `fanwe_supplier`
+-- 转存表中的数据 `fanwe_supplier`
 --
 
 INSERT INTO `fanwe_supplier` (`id`, `name`, `preview`, `content`, `sort`, `is_effect`, `city_id`, `name_match`, `name_match_row`, `bank_info`, `money`, `bank_name`, `bank_user`) VALUES
@@ -7608,7 +7679,7 @@ INSERT INTO `fanwe_supplier` (`id`, `name`, `preview`, `content`, `sort`, `is_ef
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_account`
+-- 表的结构 `fanwe_supplier_account`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_account` (
@@ -7629,7 +7700,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_account` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `fanwe_supplier_account`
+-- 转存表中的数据 `fanwe_supplier_account`
 --
 
 INSERT INTO `fanwe_supplier_account` (`id`, `account_name`, `account_password`, `supplier_id`, `is_effect`, `is_delete`, `description`, `login_ip`, `login_time`, `update_time`, `allow_delivery`, `allow_charge`) VALUES
@@ -7638,7 +7709,7 @@ INSERT INTO `fanwe_supplier_account` (`id`, `account_name`, `account_password`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_account_location_link`
+-- 表的结构 `fanwe_supplier_account_location_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_account_location_link` (
@@ -7648,7 +7719,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_account_location_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_account_location_link`
+-- 转存表中的数据 `fanwe_supplier_account_location_link`
 --
 
 INSERT INTO `fanwe_supplier_account_location_link` (`account_id`, `location_id`) VALUES
@@ -7657,7 +7728,7 @@ INSERT INTO `fanwe_supplier_account_location_link` (`account_id`, `location_id`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_dy`
+-- 表的结构 `fanwe_supplier_dy`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_dy` (
@@ -7669,7 +7740,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_dy` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location`
+-- 表的结构 `fanwe_supplier_location`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location` (
@@ -7767,7 +7838,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
--- Dumping data for table `fanwe_supplier_location`
+-- 转存表中的数据 `fanwe_supplier_location`
 --
 
 INSERT INTO `fanwe_supplier_location` (`id`, `name`, `route`, `address`, `tel`, `contact`, `xpoint`, `ypoint`, `supplier_id`, `open_time`, `brief`, `is_main`, `api_address`, `city_id`, `deal_cate_match`, `deal_cate_match_row`, `locate_match`, `locate_match_row`, `name_match`, `name_match_row`, `deal_cate_id`, `preview`, `is_recommend`, `is_verify`, `tags`, `tags_match`, `tags_match_row`, `avg_point`, `good_dp_count`, `bad_dp_count`, `common_dp_count`, `total_point`, `dp_count`, `image_count`, `ref_avg_price`, `good_rate`, `common_rate`, `sms_content`, `index_img`, `tuan_count`, `event_count`, `youhui_count`, `daijin_count`, `seo_title`, `seo_keyword`, `seo_description`, `is_effect`, `biz_license`, `biz_other_license`, `new_dp_count`, `new_dp_count_time`, `shop_count`, `mobile_brief`, `sort`, `dp_group_point`, `tuan_youhui_cache`) VALUES
@@ -7782,7 +7853,7 @@ INSERT INTO `fanwe_supplier_location` (`id`, `name`, `route`, `address`, `tel`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_area_link`
+-- 表的结构 `fanwe_supplier_location_area_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_area_link` (
@@ -7792,7 +7863,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_area_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_location_area_link`
+-- 转存表中的数据 `fanwe_supplier_location_area_link`
 --
 
 INSERT INTO `fanwe_supplier_location_area_link` (`location_id`, `area_id`) VALUES
@@ -7812,7 +7883,7 @@ INSERT INTO `fanwe_supplier_location_area_link` (`location_id`, `area_id`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_brand_link`
+-- 表的结构 `fanwe_supplier_location_brand_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_brand_link` (
@@ -7824,7 +7895,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_brand_link` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_dp`
+-- 表的结构 `fanwe_supplier_location_dp`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp` (
@@ -7866,7 +7937,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_supplier_location_dp`
+-- 转存表中的数据 `fanwe_supplier_location_dp`
 --
 
 INSERT INTO `fanwe_supplier_location_dp` (`id`, `title`, `content`, `create_time`, `point`, `user_id`, `is_img`, `is_best`, `is_top`, `status`, `good_count`, `bad_count`, `reply_count`, `supplier_location_id`, `avg_price`, `kb_user_id`, `kb_create_time`, `kb_tags`, `is_index`, `is_buy`, `from_data`, `rel_app_index`, `rel_route`, `rel_param`, `message_id`) VALUES
@@ -7877,7 +7948,7 @@ INSERT INTO `fanwe_supplier_location_dp` (`id`, `title`, `content`, `create_time
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_dp_point_result`
+-- 表的结构 `fanwe_supplier_location_dp_point_result`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_point_result` (
@@ -7891,7 +7962,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_point_result` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_location_dp_point_result`
+-- 转存表中的数据 `fanwe_supplier_location_dp_point_result`
 --
 
 INSERT INTO `fanwe_supplier_location_dp_point_result` (`group_id`, `point`, `supplier_location_id`, `dp_id`) VALUES
@@ -7905,7 +7976,7 @@ INSERT INTO `fanwe_supplier_location_dp_point_result` (`group_id`, `point`, `sup
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_dp_reply`
+-- 表的结构 `fanwe_supplier_location_dp_reply`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_reply` (
@@ -7921,7 +7992,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_reply` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_dp_tag_result`
+-- 表的结构 `fanwe_supplier_location_dp_tag_result`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_tag_result` (
@@ -7932,7 +8003,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_dp_tag_result` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_location_dp_tag_result`
+-- 转存表中的数据 `fanwe_supplier_location_dp_tag_result`
 --
 
 INSERT INTO `fanwe_supplier_location_dp_tag_result` (`tags`, `dp_id`, `group_id`, `supplier_location_id`) VALUES
@@ -7942,7 +8013,7 @@ INSERT INTO `fanwe_supplier_location_dp_tag_result` (`tags`, `dp_id`, `group_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_images`
+-- 表的结构 `fanwe_supplier_location_images`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_images` (
@@ -7968,7 +8039,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_point_result`
+-- 表的结构 `fanwe_supplier_location_point_result`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_point_result` (
@@ -7985,7 +8056,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_point_result` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_location_point_result`
+-- 转存表中的数据 `fanwe_supplier_location_point_result`
 --
 
 INSERT INTO `fanwe_supplier_location_point_result` (`group_id`, `avg_point`, `supplier_location_id`, `total_point`) VALUES
@@ -7995,7 +8066,7 @@ INSERT INTO `fanwe_supplier_location_point_result` (`group_id`, `avg_point`, `su
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_location_sign_log`
+-- 表的结构 `fanwe_supplier_location_sign_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_sign_log` (
@@ -8013,7 +8084,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_location_sign_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_money_log`
+-- 表的结构 `fanwe_supplier_money_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_money_log` (
@@ -8028,7 +8099,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_money_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_money_submit`
+-- 表的结构 `fanwe_supplier_money_submit`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_money_submit` (
@@ -8043,7 +8114,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_money_submit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_submit`
+-- 表的结构 `fanwe_supplier_submit`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_submit` (
@@ -8078,7 +8149,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_submit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_tag`
+-- 表的结构 `fanwe_supplier_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_tag` (
@@ -8091,7 +8162,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_tag` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_supplier_tag`
+-- 转存表中的数据 `fanwe_supplier_tag`
 --
 
 INSERT INTO `fanwe_supplier_tag` (`tag_name`, `supplier_location_id`, `group_id`, `total_count`) VALUES
@@ -8102,7 +8173,7 @@ INSERT INTO `fanwe_supplier_tag` (`tag_name`, `supplier_location_id`, `group_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_supplier_tag_group_preset`
+-- 表的结构 `fanwe_supplier_tag_group_preset`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_supplier_tag_group_preset` (
@@ -8114,7 +8185,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_supplier_tag_group_preset` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_tag_group`
+-- 表的结构 `fanwe_tag_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_tag_group` (
@@ -8131,7 +8202,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_tag_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `fanwe_tag_group`
+-- 转存表中的数据 `fanwe_tag_group`
 --
 
 INSERT INTO `fanwe_tag_group` (`id`, `name`, `preset`, `sort`, `memo`, `tags`, `allow_dp`, `allow_search`, `allow_vote`) VALUES
@@ -8144,7 +8215,7 @@ INSERT INTO `fanwe_tag_group` (`id`, `name`, `preset`, `sort`, `memo`, `tags`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_tag_group_link`
+-- 表的结构 `fanwe_tag_group_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_tag_group_link` (
@@ -8155,7 +8226,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_tag_group_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_tag_group_link`
+-- 转存表中的数据 `fanwe_tag_group_link`
 --
 
 INSERT INTO `fanwe_tag_group_link` (`tag_group_id`, `category_id`) VALUES
@@ -8184,7 +8255,7 @@ INSERT INTO `fanwe_tag_group_link` (`tag_group_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_tag_user_vote`
+-- 表的结构 `fanwe_tag_user_vote`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_tag_user_vote` (
@@ -8202,7 +8273,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_tag_user_vote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic`
+-- 表的结构 `fanwe_topic`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic` (
@@ -8283,7 +8354,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=180 ;
 
 --
--- Dumping data for table `fanwe_topic`
+-- 转存表中的数据 `fanwe_topic`
 --
 
 INSERT INTO `fanwe_topic` (`id`, `title`, `forum_title`, `content`, `create_time`, `type`, `user_id`, `user_name`, `is_effect`, `is_delete`, `relay_id`, `origin_id`, `reply_count`, `relay_count`, `good_count`, `bad_count`, `click_count`, `rel_app_index`, `rel_route`, `rel_param`, `message_id`, `topic_group`, `fav_id`, `fav_count`, `user_name_match`, `user_name_match_row`, `keyword_match`, `keyword_match_row`, `xpoint`, `ypoint`, `tags`, `is_recommend`, `has_image`, `source_type`, `source_name`, `source_url`, `group_data`, `daren_page`, `group_id`, `is_top`, `is_best`, `op_memo`, `last_time`, `last_user_id`, `cate_match`, `cate_match_row`, `origin_topic_data`, `images_count`, `image_list`, `is_cached`, `topic_group_data`) VALUES
@@ -8339,7 +8410,7 @@ INSERT INTO `fanwe_topic` (`id`, `title`, `forum_title`, `content`, `create_time
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_cate_link`
+-- 表的结构 `fanwe_topic_cate_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_cate_link` (
@@ -8349,7 +8420,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_cate_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_topic_cate_link`
+-- 转存表中的数据 `fanwe_topic_cate_link`
 --
 
 INSERT INTO `fanwe_topic_cate_link` (`topic_id`, `cate_id`) VALUES
@@ -8417,7 +8488,7 @@ INSERT INTO `fanwe_topic_cate_link` (`topic_id`, `cate_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_group`
+-- 表的结构 `fanwe_topic_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_group` (
@@ -8437,7 +8508,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `fanwe_topic_group`
+-- 转存表中的数据 `fanwe_topic_group`
 --
 
 INSERT INTO `fanwe_topic_group` (`id`, `name`, `memo`, `sort`, `create_time`, `cate_id`, `user_count`, `topic_count`, `icon`, `image`, `is_effect`, `user_id`) VALUES
@@ -8447,7 +8518,7 @@ INSERT INTO `fanwe_topic_group` (`id`, `name`, `memo`, `sort`, `create_time`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_group_cate`
+-- 表的结构 `fanwe_topic_group_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_group_cate` (
@@ -8461,7 +8532,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_group_cate` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_topic_group_cate`
+-- 转存表中的数据 `fanwe_topic_group_cate`
 --
 
 INSERT INTO `fanwe_topic_group_cate` (`id`, `name`, `sort`, `icon`, `group_count`, `is_effect`) VALUES
@@ -8472,7 +8543,7 @@ INSERT INTO `fanwe_topic_group_cate` (`id`, `name`, `sort`, `icon`, `group_count
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_image`
+-- 表的结构 `fanwe_topic_image`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_image` (
@@ -8493,7 +8564,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_image` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=144 ;
 
 --
--- Dumping data for table `fanwe_topic_image`
+-- 转存表中的数据 `fanwe_topic_image`
 --
 
 INSERT INTO `fanwe_topic_image` (`id`, `topic_id`, `name`, `filesize`, `create_time`, `user_id`, `user_name`, `path`, `topic_table`, `o_path`, `width`, `height`) VALUES
@@ -8567,7 +8638,7 @@ INSERT INTO `fanwe_topic_image` (`id`, `topic_id`, `name`, `filesize`, `create_t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_reply`
+-- 表的结构 `fanwe_topic_reply`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_reply` (
@@ -8588,7 +8659,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_reply` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=42 ;
 
 --
--- Dumping data for table `fanwe_topic_reply`
+-- 转存表中的数据 `fanwe_topic_reply`
 --
 
 INSERT INTO `fanwe_topic_reply` (`id`, `topic_id`, `content`, `user_id`, `user_name`, `reply_id`, `reply_user_id`, `reply_user_name`, `create_time`, `is_effect`, `is_delete`) VALUES
@@ -8600,7 +8671,7 @@ INSERT INTO `fanwe_topic_reply` (`id`, `topic_id`, `content`, `user_id`, `user_n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_tag`
+-- 表的结构 `fanwe_topic_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_tag` (
@@ -8616,7 +8687,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_tag` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
--- Dumping data for table `fanwe_topic_tag`
+-- 转存表中的数据 `fanwe_topic_tag`
 --
 
 INSERT INTO `fanwe_topic_tag` (`id`, `name`, `is_recommend`, `count`, `is_preset`, `color`, `sort`) VALUES
@@ -8635,7 +8706,7 @@ INSERT INTO `fanwe_topic_tag` (`id`, `name`, `is_recommend`, `count`, `is_preset
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_tag_cate`
+-- 表的结构 `fanwe_topic_tag_cate`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_tag_cate` (
@@ -8650,7 +8721,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_tag_cate` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `fanwe_topic_tag_cate`
+-- 转存表中的数据 `fanwe_topic_tag_cate`
 --
 
 INSERT INTO `fanwe_topic_tag_cate` (`id`, `name`, `sub_name`, `mobile_title_bg`, `sort`, `showin_mobile`, `showin_web`) VALUES
@@ -8665,7 +8736,7 @@ INSERT INTO `fanwe_topic_tag_cate` (`id`, `name`, `sub_name`, `mobile_title_bg`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_tag_cate_link`
+-- 表的结构 `fanwe_topic_tag_cate_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_tag_cate_link` (
@@ -8675,7 +8746,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_tag_cate_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_topic_tag_cate_link`
+-- 转存表中的数据 `fanwe_topic_tag_cate_link`
 --
 
 INSERT INTO `fanwe_topic_tag_cate_link` (`cate_id`, `tag_id`) VALUES
@@ -8760,7 +8831,7 @@ INSERT INTO `fanwe_topic_tag_cate_link` (`cate_id`, `tag_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_title`
+-- 表的结构 `fanwe_topic_title`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_title` (
@@ -8776,7 +8847,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_title` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_topic_title`
+-- 转存表中的数据 `fanwe_topic_title`
 --
 
 INSERT INTO `fanwe_topic_title` (`id`, `name`, `type`, `is_recommend`, `count`, `color`, `sort`) VALUES
@@ -8787,7 +8858,7 @@ INSERT INTO `fanwe_topic_title` (`id`, `name`, `type`, `is_recommend`, `count`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_title_cate_link`
+-- 表的结构 `fanwe_topic_title_cate_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_title_cate_link` (
@@ -8797,7 +8868,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_title_cate_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_topic_title_cate_link`
+-- 转存表中的数据 `fanwe_topic_title_cate_link`
 --
 
 INSERT INTO `fanwe_topic_title_cate_link` (`title_id`, `cate_id`) VALUES
@@ -8807,7 +8878,7 @@ INSERT INTO `fanwe_topic_title_cate_link` (`title_id`, `cate_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_topic_vote_log`
+-- 表的结构 `fanwe_topic_vote_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_topic_vote_log` (
@@ -8821,7 +8892,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_topic_vote_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_urls`
+-- 表的结构 `fanwe_urls`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_urls` (
@@ -8834,7 +8905,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_urls` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user`
+-- 表的结构 `fanwe_user`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user` (
@@ -8875,20 +8946,20 @@ CREATE TABLE IF NOT EXISTS `fanwe_user` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=22 ;
 
 --
--- Dumping data for table `fanwe_user`
+-- 转存表中的数据 `fanwe_user`
 --
 
 INSERT INTO `fanwe_user` (`id`, `user_name`, `user_pwd`, `create_time`, `update_time`, `is_effect`, `email`, `money`, `login_time`, `login_ip`, `province`, `city`, `password_verify`, `sex`, `build_count`, `support_count`, `focus_count`, `integrate_id`, `intro`, `ex_real_name`, `ex_account_info`, `ex_contact`, `code`, `sina_id`, `sina_token`, `sina_secret`, `sina_url`, `tencent_id`, `tencent_token`, `tencent_secret`, `tencent_url`) VALUES
 (17, 'zhaoyu', '6714ccb93be0fda4e51f206b91b46358', 1352227130, 1352227130, 1, '900930@gmail.com', 1200.0000, 1352232219, '127.0.0.1', '法国', '里昂', '', 1, 2, 1, 1, 0, '兆余', '', '', '', '', '', '', '', '', '', '', '', ''),
 (18, 'fzmatthew', '6714ccb93be0fda4e51f206b91b46358', 1352229180, 1352229180, 1, 'a@b.com', 980.0000, 1352246617, '127.0.0.1', '北京', '东城区', '', 1, 0, 3, 1, 0, '爱旅行的猫，生活在路上', '', '', '', '', '', '', '', '', '', '', '', ''),
-(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 1352230142, 1352230142, 1, 'test@test.com', 0.0000, 1352232937, '127.0.0.1', '广东', '江门', '', 0, 0, 10, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 1352230142, 1352230142, 1, 'test@test.com', 0.0000, 1415691813, '127.0.0.1', '广东', '江门', '', 0, 0, 10, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (20, 'maomao', 'c2fe59547322a4bb7db612af5dae1281', 1380612008, 1380612008, 1, '10000@qq.com', 0.0000, 1380612008, '127.0.0.1', '', '', '', 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (21, 'myself', 'a2bab50d3a611bcf6e9c4af2d6a8dc4f', 1402205812, 1402205812, 1, 'isanlik@qq.com', 0.0000, 1402383955, '127.0.0.1', '', '', '', 0, 1, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_active_log`
+-- 表的结构 `fanwe_user_active_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_active_log` (
@@ -8903,7 +8974,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_active_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
--- Dumping data for table `fanwe_user_active_log`
+-- 转存表中的数据 `fanwe_user_active_log`
 --
 
 INSERT INTO `fanwe_user_active_log` (`id`, `user_id`, `create_time`, `point`, `score`, `money`) VALUES
@@ -8926,7 +8997,7 @@ INSERT INTO `fanwe_user_active_log` (`id`, `user_id`, `create_time`, `point`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_auth`
+-- 表的结构 `fanwe_user_auth`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_auth` (
@@ -8939,7 +9010,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_auth` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `fanwe_user_auth`
+-- 转存表中的数据 `fanwe_user_auth`
 --
 
 INSERT INTO `fanwe_user_auth` (`id`, `user_id`, `m_name`, `a_name`, `rel_id`) VALUES
@@ -8957,7 +9028,7 @@ INSERT INTO `fanwe_user_auth` (`id`, `user_id`, `m_name`, `a_name`, `rel_id`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_cate_link`
+-- 表的结构 `fanwe_user_cate_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_cate_link` (
@@ -8967,7 +9038,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_cate_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_user_cate_link`
+-- 转存表中的数据 `fanwe_user_cate_link`
 --
 
 INSERT INTO `fanwe_user_cate_link` (`user_id`, `cate_id`) VALUES
@@ -8982,7 +9053,7 @@ INSERT INTO `fanwe_user_cate_link` (`user_id`, `cate_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_consignee`
+-- 表的结构 `fanwe_user_consignee`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_consignee` (
@@ -8999,7 +9070,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_consignee` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=21 ;
 
 --
--- Dumping data for table `fanwe_user_consignee`
+-- 转存表中的数据 `fanwe_user_consignee`
 --
 
 INSERT INTO `fanwe_user_consignee` (`id`, `user_id`, `province`, `city`, `address`, `mobile`, `zip`, `consignee`) VALUES
@@ -9010,7 +9081,7 @@ INSERT INTO `fanwe_user_consignee` (`id`, `user_id`, `province`, `city`, `addres
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_deal_notify`
+-- 表的结构 `fanwe_user_deal_notify`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_deal_notify` (
@@ -9025,7 +9096,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_deal_notify` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=21 ;
 
 --
--- Dumping data for table `fanwe_user_deal_notify`
+-- 转存表中的数据 `fanwe_user_deal_notify`
 --
 
 INSERT INTO `fanwe_user_deal_notify` (`id`, `user_id`, `deal_id`, `create_time`) VALUES
@@ -9034,7 +9105,7 @@ INSERT INTO `fanwe_user_deal_notify` (`id`, `user_id`, `deal_id`, `create_time`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_extend`
+-- 表的结构 `fanwe_user_extend`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_extend` (
@@ -9048,7 +9119,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_extend` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_field`
+-- 表的结构 `fanwe_user_field`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_field` (
@@ -9066,7 +9137,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_focus`
+-- 表的结构 `fanwe_user_focus`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_focus` (
@@ -9080,7 +9151,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_focus` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_user_focus`
+-- 转存表中的数据 `fanwe_user_focus`
 --
 
 INSERT INTO `fanwe_user_focus` (`focus_user_id`, `focused_user_id`, `focus_user_name`, `focused_user_name`) VALUES
@@ -9096,7 +9167,7 @@ INSERT INTO `fanwe_user_focus` (`focus_user_id`, `focused_user_id`, `focus_user_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_frequented`
+-- 表的结构 `fanwe_user_frequented`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_frequented` (
@@ -9117,7 +9188,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_frequented` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_group`
+-- 表的结构 `fanwe_user_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_group` (
@@ -9129,7 +9200,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_user_group`
+-- 转存表中的数据 `fanwe_user_group`
 --
 
 INSERT INTO `fanwe_user_group` (`id`, `name`, `score`, `discount`) VALUES
@@ -9138,7 +9209,7 @@ INSERT INTO `fanwe_user_group` (`id`, `name`, `score`, `discount`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_level`
+-- 表的结构 `fanwe_user_level`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_level` (
@@ -9150,7 +9221,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_level` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `fanwe_user_level`
+-- 转存表中的数据 `fanwe_user_level`
 --
 
 INSERT INTO `fanwe_user_level` (`id`, `name`, `point`) VALUES
@@ -9160,7 +9231,7 @@ INSERT INTO `fanwe_user_level` (`id`, `name`, `point`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_log`
+-- 表的结构 `fanwe_user_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_log` (
@@ -9174,7 +9245,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_log` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=133 ;
 
 --
--- Dumping data for table `fanwe_user_log`
+-- 转存表中的数据 `fanwe_user_log`
 --
 
 INSERT INTO `fanwe_user_log` (`id`, `log_info`, `log_time`, `log_admin_id`, `money`, `user_id`) VALUES
@@ -9201,7 +9272,7 @@ INSERT INTO `fanwe_user_log` (`id`, `log_info`, `log_time`, `log_admin_id`, `mon
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_medal`
+-- 表的结构 `fanwe_user_medal`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_medal` (
@@ -9216,7 +9287,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_medal` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_user_medal`
+-- 转存表中的数据 `fanwe_user_medal`
 --
 
 INSERT INTO `fanwe_user_medal` (`id`, `user_id`, `medal_id`, `name`, `create_time`, `is_delete`, `icon`) VALUES
@@ -9225,7 +9296,7 @@ INSERT INTO `fanwe_user_medal` (`id`, `user_id`, `medal_id`, `name`, `create_tim
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_message`
+-- 表的结构 `fanwe_user_message`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_message` (
@@ -9246,7 +9317,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_message` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=53 ;
 
 --
--- Dumping data for table `fanwe_user_message`
+-- 转存表中的数据 `fanwe_user_message`
 --
 
 INSERT INTO `fanwe_user_message` (`id`, `create_time`, `message`, `user_id`, `dest_user_id`, `send_user_id`, `receive_user_id`, `user_name`, `dest_user_name`, `send_user_name`, `receive_user_name`, `message_type`, `is_read`) VALUES
@@ -9260,7 +9331,7 @@ INSERT INTO `fanwe_user_message` (`id`, `create_time`, `message`, `user_id`, `de
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_notify`
+-- 表的结构 `fanwe_user_notify`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_notify` (
@@ -9275,7 +9346,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_notify` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=73 ;
 
 --
--- Dumping data for table `fanwe_user_notify`
+-- 转存表中的数据 `fanwe_user_notify`
 --
 
 INSERT INTO `fanwe_user_notify` (`id`, `user_id`, `log_info`, `log_time`, `is_read`, `url_route`, `url_param`) VALUES
@@ -9287,7 +9358,7 @@ INSERT INTO `fanwe_user_notify` (`id`, `user_id`, `log_info`, `log_time`, `is_re
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_refund`
+-- 表的结构 `fanwe_user_refund`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_refund` (
@@ -9306,7 +9377,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_refund` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_sign_log`
+-- 表的结构 `fanwe_user_sign_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_sign_log` (
@@ -9320,7 +9391,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_sign_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_topic_group`
+-- 表的结构 `fanwe_user_topic_group`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_topic_group` (
@@ -9334,7 +9405,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_topic_group` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `fanwe_user_topic_group`
+-- 转存表中的数据 `fanwe_user_topic_group`
 --
 
 INSERT INTO `fanwe_user_topic_group` (`id`, `group_id`, `user_id`, `create_time`, `type`) VALUES
@@ -9344,7 +9415,7 @@ INSERT INTO `fanwe_user_topic_group` (`id`, `group_id`, `user_id`, `create_time`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_weibo`
+-- 表的结构 `fanwe_user_weibo`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_weibo` (
@@ -9356,7 +9427,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_weibo` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=56 ;
 
 --
--- Dumping data for table `fanwe_user_weibo`
+-- 转存表中的数据 `fanwe_user_weibo`
 --
 
 INSERT INTO `fanwe_user_weibo` (`id`, `user_id`, `weibo_url`) VALUES
@@ -9365,7 +9436,7 @@ INSERT INTO `fanwe_user_weibo` (`id`, `user_id`, `weibo_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_user_x_y_point`
+-- 表的结构 `fanwe_user_x_y_point`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_user_x_y_point` (
@@ -9378,7 +9449,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user_x_y_point` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `fanwe_user_x_y_point`
+-- 转存表中的数据 `fanwe_user_x_y_point`
 --
 
 INSERT INTO `fanwe_user_x_y_point` (`id`, `uid`, `xpoint`, `ypoint`, `locate_time`) VALUES
@@ -9387,7 +9458,7 @@ INSERT INTO `fanwe_user_x_y_point` (`id`, `uid`, `xpoint`, `ypoint`, `locate_tim
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_vote`
+-- 表的结构 `fanwe_vote`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_vote` (
@@ -9402,7 +9473,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_vote` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `fanwe_vote`
+-- 转存表中的数据 `fanwe_vote`
 --
 
 INSERT INTO `fanwe_vote` (`id`, `name`, `begin_time`, `end_time`, `is_effect`, `sort`, `description`) VALUES
@@ -9411,7 +9482,7 @@ INSERT INTO `fanwe_vote` (`id`, `name`, `begin_time`, `end_time`, `is_effect`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_vote_ask`
+-- 表的结构 `fanwe_vote_ask`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_vote_ask` (
@@ -9425,7 +9496,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_vote_ask` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
--- Dumping data for table `fanwe_vote_ask`
+-- 转存表中的数据 `fanwe_vote_ask`
 --
 
 INSERT INTO `fanwe_vote_ask` (`id`, `name`, `type`, `sort`, `vote_id`, `val_scope`) VALUES
@@ -9435,7 +9506,7 @@ INSERT INTO `fanwe_vote_ask` (`id`, `name`, `type`, `sort`, `vote_id`, `val_scop
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_vote_result`
+-- 表的结构 `fanwe_vote_result`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_vote_result` (
@@ -9450,7 +9521,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_vote_result` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_weight_unit`
+-- 表的结构 `fanwe_weight_unit`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_weight_unit` (
@@ -9461,7 +9532,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_weight_unit` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fanwe_weight_unit`
+-- 转存表中的数据 `fanwe_weight_unit`
 --
 
 INSERT INTO `fanwe_weight_unit` (`id`, `name`, `rate`) VALUES
@@ -9470,7 +9541,7 @@ INSERT INTO `fanwe_weight_unit` (`id`, `name`, `rate`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_youhui`
+-- 表的结构 `fanwe_youhui`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_youhui` (
@@ -9532,7 +9603,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_youhui` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_youhui_location_link`
+-- 表的结构 `fanwe_youhui_location_link`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_youhui_location_link` (
@@ -9542,7 +9613,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_youhui_location_link` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fanwe_youhui_location_link`
+-- 转存表中的数据 `fanwe_youhui_location_link`
 --
 
 INSERT INTO `fanwe_youhui_location_link` (`youhui_id`, `location_id`) VALUES
@@ -9557,7 +9628,7 @@ INSERT INTO `fanwe_youhui_location_link` (`youhui_id`, `location_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_youhui_log`
+-- 表的结构 `fanwe_youhui_log`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_youhui_log` (
@@ -9580,7 +9651,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_youhui_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fanwe_youhui_sc`
+-- 表的结构 `fanwe_youhui_sc`
 --
 
 CREATE TABLE IF NOT EXISTS `fanwe_youhui_sc` (
@@ -9593,7 +9664,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_youhui_sc` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_admin`
+-- 表的结构 `hi_admin`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_admin` (
@@ -9605,7 +9676,7 @@ CREATE TABLE IF NOT EXISTS `hi_admin` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `hi_admin`
+-- 转存表中的数据 `hi_admin`
 --
 
 INSERT INTO `hi_admin` (`admin_id`, `admin_name`, `admin_pass`, `admin_key`) VALUES
@@ -9614,7 +9685,7 @@ INSERT INTO `hi_admin` (`admin_id`, `admin_name`, `admin_pass`, `admin_key`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_all`
+-- 表的结构 `hi_all`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_all` (
@@ -9640,7 +9711,7 @@ CREATE TABLE IF NOT EXISTS `hi_all` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `hi_all`
+-- 转存表中的数据 `hi_all`
 --
 
 INSERT INTO `hi_all` (`a_id`, `a_title`, `a_key`, `a_disc`, `a_bottom`, `a_alipay`, `a_paykey`, `a_pid`, `a_alipayclass`, `a_tel`, `a_qq`, `a_www`, `s_jf`, `mysite`, `yjbl`, `fx`, `user_top`, `p_gs`) VALUES
@@ -9649,7 +9720,7 @@ INSERT INTO `hi_all` (`a_id`, `a_title`, `a_key`, `a_disc`, `a_bottom`, `a_alipa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_cz`
+-- 表的结构 `hi_cz`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_cz` (
@@ -9664,7 +9735,7 @@ CREATE TABLE IF NOT EXISTS `hi_cz` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=132 ;
 
 --
--- Dumping data for table `hi_cz`
+-- 转存表中的数据 `hi_cz`
 --
 
 INSERT INTO `hi_cz` (`u_id`, `price`, `orderid`, `addtime`, `zt`, `c_id`, `c_type`) VALUES
@@ -9795,7 +9866,7 @@ INSERT INTO `hi_cz` (`u_id`, `price`, `orderid`, `addtime`, `zt`, `c_id`, `c_typ
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_list`
+-- 表的结构 `hi_list`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_list` (
@@ -9806,7 +9877,7 @@ CREATE TABLE IF NOT EXISTS `hi_list` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `hi_list`
+-- 转存表中的数据 `hi_list`
 --
 
 INSERT INTO `hi_list` (`xitong`, `content`, `lid`) VALUES
@@ -9815,7 +9886,7 @@ INSERT INTO `hi_list` (`xitong`, `content`, `lid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_o`
+-- 表的结构 `hi_o`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_o` (
@@ -9830,7 +9901,7 @@ CREATE TABLE IF NOT EXISTS `hi_o` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1483 ;
 
 --
--- Dumping data for table `hi_o`
+-- 转存表中的数据 `hi_o`
 --
 
 INSERT INTO `hi_o` (`o_id`, `p_id`, `u_id`, `orderid`, `addtime`, `zt`, `ptype`) VALUES
@@ -11321,7 +11392,7 @@ INSERT INTO `hi_o` (`o_id`, `p_id`, `u_id`, `orderid`, `addtime`, `zt`, `ptype`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_p`
+-- 表的结构 `hi_p`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_p` (
@@ -11341,7 +11412,7 @@ CREATE TABLE IF NOT EXISTS `hi_p` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `hi_p`
+-- 转存表中的数据 `hi_p`
 --
 
 INSERT INTO `hi_p` (`p_id`, `p_title`, `p_jj`, `p_cont`, `p_jf`, `p_price`, `p_tj`, `p_time`, `p_file`, `p_data`, `p_px`, `p_xs`) VALUES
@@ -11350,7 +11421,7 @@ INSERT INTO `hi_p` (`p_id`, `p_title`, `p_jj`, `p_cont`, `p_jf`, `p_price`, `p_t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_tx`
+-- 表的结构 `hi_tx`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_tx` (
@@ -11364,7 +11435,7 @@ CREATE TABLE IF NOT EXISTS `hi_tx` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=25 ;
 
 --
--- Dumping data for table `hi_tx`
+-- 转存表中的数据 `hi_tx`
 --
 
 INSERT INTO `hi_tx` (`t_id`, `u_id`, `price`, `addtime`, `zt`, `orderid`) VALUES
@@ -11375,7 +11446,7 @@ INSERT INTO `hi_tx` (`t_id`, `u_id`, `price`, `addtime`, `zt`, `orderid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hi_user`
+-- 表的结构 `hi_user`
 --
 
 CREATE TABLE IF NOT EXISTS `hi_user` (
@@ -11397,7 +11468,7 @@ CREATE TABLE IF NOT EXISTS `hi_user` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=3158 ;
 
 --
--- Dumping data for table `hi_user`
+-- 转存表中的数据 `hi_user`
 --
 
 INSERT INTO `hi_user` (`u_id`, `user_name`, `user_pass`, `email`, `user_tui`, `jf`, `qian`, `add_time`, `u_ip`, `u_qx`, `alipay`, `alipayname`, `shdz`, `user_dlj`) VALUES
