@@ -6,7 +6,7 @@ input{ font-family:Arial;}
 div{margin:0 auto; padding:0;}
 h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{margin:0; padding:0; border:none; list-style-type:none;}
 .wrap{ width:960px; height:auto;} /*主体容器*/
-.f_l{float:left;}
+.f_l{float:left; margin-bottom:20px;}
 .f_r{float:right;}
 .tl{ text-align:left;}
 .tc{ text-align:center;}
@@ -236,8 +236,11 @@ _display:block;  _visibility:hidden;
 }
 
 .help_row{ text-align:center; padding:20px 0px; color:#f2f2f2;}
+.help_row .foot_menu{display:inline-block; vertical-align:top;margin:0 10px 0 10px;}
 .help_row a{ color:#690; text-decoration:none;}
 .help_row a:hover{ color:#9c0; text-decoration:none;}
+
+
 .help_item_box{ padding:20px; line-height:22px;}
 
 .license{ text-align:center; color:#ccc; }
@@ -258,3 +261,16 @@ a.linkgreen:hover{ color:#9c0; text-decoration:none;}
 .pages .current{  display:inline-block; padding:0px 5px; height:22px; line-height:22px;  color:#fff; background:#9c0;border:1px solid #9c0}
 
 .usermessage textarea{  border:#ccc solid 1px; width:450px; min-width:450px; max-width:450px; height:100px; min-height:100px; max-height:100px; padding:5px; color:#666; font-size:14px; line-height:18px; border-radius:3px;   }
+
+
+.main-cates a{padding:3px !important;}
+
+.cates ul{-webkit-column-count: 4;-moz-column-count: 4;}
+.cates a{  display:block }
+
+
+
+#puzzle  {background:#000;height:200px;}
+#puzzle-content {padding-top:100px;width:20%;margin:0 px auto; height:40%;background:#000;}
+#vote-content {margin:0px auto;width:20%;height:20%;text-align:center;}  
+#ad {background:#000;height:80px;width:100%;color:white;}

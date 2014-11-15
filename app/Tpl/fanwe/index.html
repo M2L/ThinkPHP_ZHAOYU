@@ -30,24 +30,67 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 			<li><a href="{url r="deals" p="r=classic"}">经典项目</a></li>
 		</ul>
 	</div>
-	<div class="f_r">
+	<div style="clear:both"></div>
+	<div id="pin_box" class="f_l">
+	{include file="inc/deal_list.html"}
+	</div>	
+
+
+
+<div id="ad" class="f_l">广告区</div>
+
+	<div class="f_r main-cates">
 		<ul class="tab-nav">
-			{foreach from=$cate_list item=cate_item}
-			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}">
-						<img src="{$cate_item.image}"  width="320px"  height="100px"
+			{foreach from=$cate_list item=cate_item key=key}
+			{if $key<7 }
+			{if ($key eq 1) or ($key eq 2) or ($key eq 4) or ($key eq 6)}
+			<div style="width:49%;float:left;overflow:hidden">
+			{/if}	
+			{if ($key eq 1) or ($key eq 6)}
+			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" >
+						<img src="{$cate_item.image}"  width="460px"  height="372px"
 						onmouseover="this.src='{$cate_item.hover_image}'"onmouseout="this.src='{$cate_item.image}'"/>
 					</a></li>
+			{else}			
+			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" class="f_r">
+						<img src="{$cate_item.image}"  width="460px"  height="184px"
+						onmouseover="this.src='{$cate_item.hover_image}'"onmouseout="this.src='{$cate_item.image}'"/>
+					</a></li>
+			{/if}
+			{if ($key eq 1) or ($key eq 3) or ($key eq 5) or ($key eq 6)}
+			</div>			
+			{/if}
+			{/if}
 			{/foreach}
 		</ul>
 	</div>
+	<div style="clear:both"></div>
+	<div class="cates">
+		所有类别
+		<ul>
+		{foreach from=$cate_list item=cate_item}
+			
+				<a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" style="display:block">{$cate_item.name}</a>
+			
+		{/foreach}
+		</ul>
+		
+
+	</div>
 	<div class="blank"></div>
-	<div class="blank"></div>
-	<div class="blank"></div>
-	<div id="pin_box">
-	{include file="inc/deal_list.html"}
-	</div>	
+
 	<div class="blank"></div>
 	<div id="pin_loading" rel="{url r="ajax#index" p="p=$current_page"}">正在努力加载</div>	
 	
+</div>
+
+
+<div id="puzzle">
+	<div id="puzzle-content">
+	<div id="vote-content"  >
+		<a href="{url r="project#add"}" class="add_project f_r"></a>	
+	</div>
+	</div>
+
 </div>
 {include file="inc/footer.html"} 

@@ -2,14 +2,27 @@
 <div class="blank"></div>
 <div class="footer">
 	<div class="wrap">
-		<div class="help_row">
-			<a href="{url r="faq"}" title="常见问题">常见问题</a>
-			{foreach from=$helps item=help}
-			 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$help.url}" title="{$help.title}">{$help.title}</a>
+		<div class="help_row" >
+			<div class="foot_menu">
+				<a href="{url r="faq"}" title="常见问题" style="display:block">常见问题</a>				 
+			</div>
+
+			{foreach from=$helps item=help key=key}
+			{if ($key neq 0) and ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
+			</div>
+			{/if}
+			{if ($key eq 0) or ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
+			<div  class="foot_menu">
+			{/if}
+			 <a href="{$help.url}" title="{$help.title}"  style="display:block">{$help.title}</a>
+		
+
 			{/foreach}
-		</div>
-		<div class="license">
-			{function name="app_conf" v="SITE_LICENSE"}
+			</div>
+			<div class="blank"></div>
+			<div class="license">
+				{function name="app_conf" v="SITE_LICENSE"}
+			</div>
 		</div>
 	</div>
 </div>
