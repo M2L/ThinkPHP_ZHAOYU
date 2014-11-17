@@ -70,7 +70,13 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 		<ul>
 		{foreach from=$cate_list item=cate_item}
 			
-				<a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" style="display:block">{$cate_item.name}</a>
+				<a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}">
+					{if $cate_item.icon neq ""}
+						<img src="{$cate_item.icon}"  width="20px"  height="20px"/>
+					{/if}
+					<span>{$cate_item.name}</span>
+				</a>
+ 
 			
 		{/foreach}
 		</ul>

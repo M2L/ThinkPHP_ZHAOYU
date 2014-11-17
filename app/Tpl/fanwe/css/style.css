@@ -223,6 +223,12 @@ _background-image:none;
 .tab-nav li.current a{ float:left display:inline-block; padding:5px; color:#fff; font-size:14px; text-decoration:none; background:#690; border-radius:3px;}
 .tab-nav li.current a:hover{ float:left display:inline-block; padding:5px; color:#fff; font-size:14px; text-decoration:none; background:#690; border-radius:3px;}
 
+.cates_list a{display:block;  padding:5px; color:#690; font-size:14px; text-decoration:none;}
+.cates_list a:hover{display:block;   padding:5px; color:#9c0; font-size:14px; text-decoration:none;}
+.cates_list li.current a{  display: block; padding:5px; color:#fff; font-size:14px; text-decoration:none; background:#690; border-radius:3px; width:30px;}
+.cates_list li.current a:hover{   display: block; padding:5px; color:#fff; font-size:14px; text-decoration:none; background:#690; border-radius:3px; width:30px;}
+
+
 .deal_brief{ height:60px;  }
 .deal_loc{ height:20px;}
 #pin_loading{ background:#fff; border:#ccc solid 1px; height:35px; text-align:center; line-height:35px; font-size:14px; color:#690; display:block;}

@@ -1,5 +1,5 @@
 {foreach from=$deal_list item=deal_item key=key}
-	<div class="deal_item_box f_l {if $key mod 4 eq 0}first{/if}">
+	<div class="deal_item_box f_l {if $key mod 3 eq 0}first{/if}">
 			<div class="deal_content_box">
 			<a href="{url r="deal#show" p="id=$deal_item.id"}" title="{$deal_item.name}">
 			<img src="{if $deal_item.image eq ''}{$TMPL}/images/empty_thumb.gif{else}{function name="get_spec_image" v=$deal_item.image w="205" h="160" g="1"}{/if}" alt="{$deal_item.name}" />

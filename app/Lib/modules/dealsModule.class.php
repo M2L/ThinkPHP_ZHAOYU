@@ -84,6 +84,7 @@ class dealsModule extends BaseModule
 		$GLOBALS['tmpl']->assign("current_page",$page);
 		
 		$condition = " is_delete = 0 and is_effect = 1 "; 
+		$order=" sort asc";
 		if($r!="")
 		{
 			if($r=="new")
@@ -100,6 +101,10 @@ class dealsModule extends BaseModule
 			{
 				$condition.=" and is_classic = 1 ";
 				$GLOBALS['tmpl']->assign("page_title","经典项目");
+			}
+			if($r=="percent")
+			{
+				$order=" percent desc";
 			}
 		}
 		if($id>0)
@@ -135,7 +140,9 @@ class dealsModule extends BaseModule
 			$GLOBALS['tmpl']->assign("page_title",$kw);
 		}
 		
-		$deal_list = $GLOBALS['db']->getAll("select * from ".DB_PREFIX."deal where ".$condition." order by sort asc limit ".$limit);
+ 
+		$calculed_table = "( select * from (SELECT  support_amount/limit_price*100 as percent,id FROM  ".DB_PREFIX."deal ) A natural join ".DB_PREFIX."deal B ) C ";
+		$deal_list = $GLOBALS['db']->getAll("select * from ".$calculed_table."where ".$condition." order by ".$order." limit ".$limit);
 		$deal_count = $GLOBALS['db']->getOne("select count(*) from ".DB_PREFIX."deal where ".$condition);
 		foreach($deal_list as $k=>$v)
 		{
