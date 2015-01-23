@@ -5,7 +5,7 @@
 		<div class="help_row" >
 			
 						 
-			
+		
 
 			{foreach from=$helps item=help key=key}
 			{if ($key neq 0) and ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
@@ -21,13 +21,20 @@
 		
 
 			{/foreach}
+
+			
 			</div>
-			<div class="blank"></div>
+			
 			<div class="license">
-				<!--
+				 <!--
 					{function name="app_conf" v="SITE_LICENSE"}
-				-->
+				 -->
+				 ©2015 武汉兆余科技有限责任公司 <a href="http://tinyyu.com">tinyyu.com</a> 版权所有 <a href="http://www.miitbeian.gov.cn/">鄂ICP备15000959号-1</a>
 			</div>
+
+
+
+			
 		</div>
 	</div>
 </div>
