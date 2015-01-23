@@ -1,0 +1,42 @@
+.news_list_box{ padding:10px;}
+
+.news_left{ width:730px; float:left; }
+.news_right{ width:200px; float:right; }
+
+.news_deal_info{ width:180px; float:left; padding-right:10px; }
+.news_deal_update{ width:520px; float:right; padding-right:10px;}
+
+.deal_bar_bg{ background:#d5d5d5; position:relative; height:4px; width:180px; font-size:0px; line-height:0px; overflow:hidden; border-radius:2px; }
+.deal_bar_front{ background:#df9856; position:absolute; height:4px; font-size:0px; line-height:0px; border-radius:2px;}
+
+.deal_news_info_row{ color:#999;}
+
+a.news_update_title{ font-size:20px; font-family:"微软雅黑"; font-weight:bolder; text-decoration:none; line-height:35px; }
+a.news_update_title:hover{ text-decoration:none;}
+.send_message{ display:inline-block; width:17px; height:12px; font-size:0px; line-height:0px; margin-left:5px; background:url(../images/message.gif) 0px 3px no-repeat; cursor:pointer;}
+
+.author{ float:left;}
+.passdate{ float:right; color:#828282; font-size:14px;}
+.dash{ border-bottom:#505470 solid 1px;}
+
+.log_info{ padding:10px 0px; font-size:14px; }
+.deal_update{ padding-bottom:50px;}
+
+.comment_tip_row{ text-align:right; font-size:12px; height:15px; line-height:15px; }
+.comment_tip_row a{ color:#c07f42; text-decoration:none;}
+.comment_tip_row a:hover{ color:#c07f42; text-decoration:none;}
+
+.news_right_title{ text-align:center;font-size:14px; font-weight:bolder; border-bottom:#fff solid 1px; padding-bottom:5px;}
+.news_right_title a{ font-size:12px; font-weight:normal;}
+.news_right_items{ text-align:center;}
+
+
+.rand_deal{ padding:5px 0px;}
+.rand_deal_image{ width:60px; height:60px; float:left; }
+.rand_deal_title{ float:right; width:120px; padding-right:10px; font-size:12px;}
+
+.switch_nav{ height:31px; border:#c07f42 solid;border-width:2px 0 0; padding-left:10px;margin-top:30px;}
+.switch_nav ul li{ float:left;}
+.switch_nav ul li a{ display:inline-block; float:left; height:30px; color:#666; text-decoration:none; line-height:30px; padding:0px 15px; border:#c07f42 solid 1px; border-top:none; background:#f2f2f2; margin-left:5px;}
+.switch_nav ul li a:hover{ text-decoration:none; }
+.switch_nav ul li.current a{ background:#c07f42; color:#fff; border:#c07f42 solid 1px; border-top:none; font-size:14px;}

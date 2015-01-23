@@ -1,0 +1,12 @@
+.HGcontainer.hidden {display:none}
+#HGcontainers {text-align: center;}
+.process {width:600px; display: inline-block;}
+.process span { display:block;padding:60px 0 25px;text-align:left;}
+.process img {float:left;}
+.dislocation {margin:-23px -20px 0 -20px;}
+
+.switch_nav{ height:31px; border:#d46463 solid;border-width:2px 0 0; padding-left:10px;}
+.switch_nav ul li{ float:left;}
+.switch_nav ul li a{ display:inline-block; float:left; height:30px; color:#666; text-decoration:none; line-height:30px; padding:0px 15px; border:#d46463 solid 1px; border-top:none; background:#f2f2f2; margin-left:5px;}
+.switch_nav ul li a:hover{ text-decoration:none; }
+.switch_nav ul li.current a{ background:#d46463; color:#fff; border:#d46463 solid 1px; border-top:none; font-size:14px;}

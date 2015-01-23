@@ -1,0 +1,33 @@
+﻿<div id="gotop"></div>
+<div class="blank0"></div>
+<div class="footer">
+	<div class="wrap ">
+		<div class="help_row" >
+			
+						 
+			
+
+			{foreach from=$helps item=help key=key}
+			{if ($key neq 0) and ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
+				</div>
+			{/if}
+			{if ($key eq 0) or ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
+				<div  class="foot_menu">
+			{/if}
+			{if ($helps[$key]['sort'] eq 3) and ($helps[$key]['sort'] neq $helps[$key-1]['sort'])}
+				<a href="{url r="faq"}" title="常见问题" style="display:block">常见问题</a>		
+			{/if}
+			 <a href="{$help.url}" title="{$help.title}"  style="display:block">{$help.title}</a>
+		
+
+			{/foreach}
+			</div>
+			<div class="blank"></div>
+			<div class="license">
+				<!--
+					{function name="app_conf" v="SITE_LICENSE"}
+				-->
+			</div>
+		</div>
+	</div>
+</div>

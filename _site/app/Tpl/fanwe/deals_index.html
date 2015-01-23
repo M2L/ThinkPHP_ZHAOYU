@@ -1,0 +1,56 @@
+{include file="inc/header.html"} 
+<?php
+$this->_var['dpagecss'][] = $this->_var['TMPL_REAL']."/css/index.css";
+$this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/index.js";
+$this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/index.js";
+$this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
+$this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
+?>
+<link rel="stylesheet" type="text/css" href="{function name="parse_css" v="$dpagecss"}" />
+<script type="text/javascript" src="{function name="parse_script" v="$dpagejs" c="$dcpagejs"}"></script>
+
+
+<div class="wrap folder">
+<div class="blank"></div>
+<div class="f_l" style="width:18%">
+		<div class="cates_list">
+			<a href="{url r="deals"   p="r=$p_r"  }" title="{$cate_item.name}">					
+					 所有类别
+				</a>		
+		<ul >
+		{foreach from=$cate_list item=cate_item}
+			<li {if $p_id eq $cate_item.id} class="current"{/if} >
+				<a href="{url r="deals" p="id=$cate_item.id&r=$p_r"}" title="{$cate_item.name}">					
+					 {$cate_item.name} 
+				</a>
+ 			</li>
+		{/foreach}
+		</ul>
+	
+
+	</div>
+
+</div>
+<div class="f_l"  style="width:75%;margin-left: 10px;">
+
+	 		<div class="f_l">
+				<ul class="tab-nav">
+					<li><a href="{url r="index"}">推荐项目</a></li>
+					<li {if $p_r eq 'new'} class="current"{/if}><a href="{url r="deals" p="r=new&id=$p_id"}">最新上线</a></li>
+					<li {if $p_r eq 'nend'} class="current"{/if}><a href="{url r="deals" p="r=nend&id=$p_id"}">即将结束</a></li>
+					<li {if $p_r eq 'classic'} class="current"{/if}><a href="{url r="deals" p="r=classic&id=$p_id"}">经典项目</a></li>
+					<li {if $p_r eq 'percent'} class="current"{/if}><a href="{url r="deals" p="r=percent&id=$p_id"}">完成排名</a></li>
+				</ul>
+			</div>
+		<div class="blank"></div>
+		<div id="pin_box">
+			{include file="inc/deal_list.html"}
+		</div>	
+
+</div>
+
+	<div class="blank"></div>
+	<div id="pin_loading" rel="{url r="ajax#deals" p="r=$p_r&id=$p_id&loc=$p_loc&tag=$p_tag&k=$p_k&p=$current_page"}">正在努力加载</div>	
+	<div class="pages">{$pages}</div>
+</div>
+{include file="inc/footer.html"} 
