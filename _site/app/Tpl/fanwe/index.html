@@ -40,11 +40,11 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 <div id="ad" class="f_l">广告区</div>
 
 	<div class="f_r main-cates">
-		<ul class="tab-nav">
+		<ul class="tab-nav" style="text-align:center">
 			{foreach from=$cate_list item=cate_item key=key}
 			{if $key<7 }
 			{if ($key eq 1) or ($key eq 2) or ($key eq 4) or ($key eq 6)}
-			<div style="width:49%;float:left;overflow:hidden">
+			<div style="width:49%;display:inline-block;overflow:hidden">
 			{/if}	
 			{if ($key eq 1) or ($key eq 6)}
 			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" >
