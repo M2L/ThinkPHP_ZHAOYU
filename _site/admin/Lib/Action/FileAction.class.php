@@ -42,7 +42,7 @@ class FileAction extends CommonAction{
 	public function do_upload_img()
 	{
 		if(intval($_REQUEST['upload_type'])==0)
-		$result = $this->uploadFile();
+		$result = $this->uploadNormalImage();
 		else
 		$result = $this->uploadImage();
 		if($result['status'] == 1)

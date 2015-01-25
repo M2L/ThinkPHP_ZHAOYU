@@ -132,7 +132,7 @@ class CommonAction extends AuthAction{
 	
 	
 	/**
-	 * 上传图片的通公基础方法
+	 * 上传水印图片的通公基础方法
 	 *
 	 * @return array
 	 */
@@ -153,31 +153,32 @@ class CommonAction extends AuthAction{
         $upload->allowExts  =  explode(',',conf('ALLOW_IMAGE_EXT')); /* 配置于config */        
        
         $dir_name = to_date(get_gmtime(),"Ym");
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir_name)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir_name);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir_name, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
 	        }
 	        
 	    $dir_name = $dir_name."/".to_date(get_gmtime(),"d");
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir_name)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir_name);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir_name, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
 	        }
 	     
 	    $dir_name = $dir_name."/".to_date(get_gmtime(),"H");
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir_name)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir_name);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir_name, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
 	        }
         
         
         
-       	$save_rec_Path = "/public/attachment/".$dir_name."/origin/";  //上传时先存放原图          	      
-        $savePath = APP_ROOT_PATH."public/attachment/".$dir_name."/origin/"; //绝对路径
-		if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir_name."/origin/")) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir_name."/origin/");
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir_name."/origin/", 0777);
-	    }        
+       	$save_rec_Path = "/public/attachment/images/".$dir_name."/origin/";  //上传时先存放原图          	      
+        $savePath = APP_ROOT_PATH."public/attachment/images/".$dir_name."/origin/"; //绝对路径
+		if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name."/origin/")) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name."/origin/");
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name."/origin/", 0777);
+	    }   
+     
         $domain_path = get_domain().APP_ROOT.$save_rec_Path;
 			
 		$upload->saveRule = "uniqid";   //唯一
@@ -203,8 +204,8 @@ class CommonAction extends AuthAction{
         			$uploadList[$k]['bigrecpath'] = $big_save_rec_Path;        			
         			if(app_conf("PUBLIC_DOMAIN_ROOT")!='')
         			{
-	        			$origin_syn_url = app_conf("PUBLIC_DOMAIN_ROOT")."/es_file.php?username=".app_conf("IMAGE_USERNAME")."&password=".app_conf("IMAGE_PASSWORD")."&file=".get_domain().APP_ROOT."/public/attachment/".$dir_name."/origin/".$fileItem['savename']."&path=attachment/".$dir_name."/origin/&name=".$fileItem['savename']."&act=0";
-	        			$big_syn_url = app_conf("PUBLIC_DOMAIN_ROOT")."/es_file.php?username=".app_conf("IMAGE_USERNAME")."&password=".app_conf("IMAGE_PASSWORD")."&file=".get_domain().APP_ROOT."/public/attachment/".$dir_name."/".$fileItem['savename']."&path=attachment/".$dir_name."/&name=".$fileItem['savename']."&act=0";
+	        			$origin_syn_url = app_conf("PUBLIC_DOMAIN_ROOT")."/es_file.php?username=".app_conf("IMAGE_USERNAME")."&password=".app_conf("IMAGE_PASSWORD")."&file=".get_domain().APP_ROOT."/public/attachment/images/".$dir_name."/origin/".$fileItem['savename']."&path=attachment/".$dir_name."/origin/&name=".$fileItem['savename']."&act=0";
+	        			$big_syn_url = app_conf("PUBLIC_DOMAIN_ROOT")."/es_file.php?username=".app_conf("IMAGE_USERNAME")."&password=".app_conf("IMAGE_PASSWORD")."&file=".get_domain().APP_ROOT."/public/attachment/images/".$dir_name."/".$fileItem['savename']."&path=attachment/".$dir_name."/&name=".$fileItem['savename']."&act=0";
 	        			@file_get_contents($origin_syn_url);
 	        			@file_get_contents($big_syn_url);
         			}
@@ -218,6 +219,75 @@ class CommonAction extends AuthAction{
 	}
 	
 	
+
+
+  /**
+   * 上传普通图片公共基础方法
+   *
+   * @return array
+   */
+  protected function uploadNormalImage()
+  {     
+    $upload = new UploadFile();
+        //设置上传文件大小
+        $upload->maxSize  = conf('MAX_IMAGE_SIZE') ;  /* 配置于config */
+        //设置上传文件类型
+    
+        $upload->allowExts  =  explode(',',conf('ALLOW_IMAGE_EXT')); /* 配置于config */        
+       
+    $dir_name = to_date(get_gmtime(),"Ym");
+      if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+               @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+               @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
+          }
+          
+      $dir_name = $dir_name."/".to_date(get_gmtime(),"d");
+      if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+               @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+               @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
+          }
+       
+      $dir_name = $dir_name."/".to_date(get_gmtime(),"H");
+      if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir_name)) { 
+               @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir_name);
+               @chmod(APP_ROOT_PATH."public/attachment/images/".$dir_name, 0777);
+          }
+        
+        
+        
+        $save_rec_Path = "/public/attachment/images/".$dir_name."/";  //上传时先存放原图                 
+        $savePath = APP_ROOT_PATH."public/attachment/images/".$dir_name."/"; //绝对路径
+        $domain_path = get_domain().APP_ROOT.$save_rec_Path;
+        
+      
+    $upload->saveRule = "uniqid";   //唯一
+    $upload->savePath = $savePath;
+        if($upload->upload())
+        {
+          $uploadList = $upload->getUploadFileInfo();   
+          foreach($uploadList as $k=>$fileItem)
+          {
+            $uploadList[$k]['recpath'] = $save_rec_Path;
+            if(app_conf("PUBLIC_DOMAIN_ROOT")!='')
+            {
+              $syn_url = app_conf("PUBLIC_DOMAIN_ROOT")."/es_file.php?username=".app_conf("IMAGE_USERNAME")."&password=".app_conf("IMAGE_PASSWORD")."&file=".$domain_path.$fileItem['savename']."&path=attachment/".$dir_name."/&name=".$fileItem['savename']."&act=0";
+              @file_get_contents($syn_url);
+            }
+          }   
+          return array("status"=>1,'data'=>$uploadList,'info'=>L("UPLOAD_SUCCESS"));
+        }
+        else 
+        {
+          return array("status"=>0,'data'=>null,'info'=>$upload->getErrorMsg());
+        }
+  }
+
+
+
+
+
+
+
 	/**
 	 * 上传文件公共基础方法
 	 *
