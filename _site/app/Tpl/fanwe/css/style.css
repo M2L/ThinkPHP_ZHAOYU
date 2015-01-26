@@ -67,7 +67,7 @@ a:hover{ /*color:#000; */text-decoration:underline; }
 
 
 .header_seach{padding:8px 0 0 5px ;}
-.header_seach .seach_text{ height:13px; width:157px; background:url(../images/search_text.gif); border:0; float:right; font-size:12px; padding:8px 10px; color:#9f9f9f;}
+.header_seach .seach_text{  background:url(../images/search_text.gif); border:0; float:right; font-size:12px; padding:8px 10px; color:#9f9f9f;}
 .header_seach .seach_submit{  cursor:pointer; height:29px; width:33px; background:url(../images/search_submit.gif); border:0; margin:0; float:right;}
 .login_tip{ text-align:right; padding-top:5px; }
 
@@ -284,12 +284,15 @@ a.linkorange:hover {color:#c07f42;text-decoration:none;}
 
 .main-cates a{padding:3px !important;}
 
+.cates {background:#FFF; width:97%; border-radius:10px;}
 .cates ul{-webkit-column-count: 4;-moz-column-count: 4;}
-.cates a{  display:block;margin-left:70px; }
+.cates a{  display:block;margin-left:70px; text-decoration:none; font-weight:bolder;}
+.cates a:hover{  display:block;margin-left:70px; text-decoration:none; font-weight:bolder;color:#2c398c;}
+
 
 
 
 #puzzle  {background:url(../images/photos_splice.jpg) scroll 0% 0% transparent;height:200px;}
 #puzzle-content {padding-top:7%;width:40%;margin:0 px auto; height:40%;}
 #vote-content {margin:0px auto;width:20%;height:20%;text-align:center;}  
-#ad {background:#000;height:80px;width:100%;color:white;}
+#ad {height:315px;width:100%;color:white;text-align:center;}

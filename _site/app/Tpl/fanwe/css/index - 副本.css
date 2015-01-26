@@ -1,6 +1,5 @@
-.index_images { overflow:hidden;  position:relative; height:320px; }
-.index_images .roll_box a{ float:left; display:block; margin:0px; padding:0px;  height:280px;}
-.index_images .roll_box a img {width:100%;height:100%;}
+.index_images { overflow:hidden; width:960px; position:relative; height:320px; }
+.index_images .roll_box a{ float:left; display:block; margin:0px; padding:0px; width:960px; height:280px;}
 .index_images .roll_box{ position:absolute; left:0px; top:0px;}
 
 .index_images .slider_page{ text-align:center; margin-top:285px;}
