@@ -3,14 +3,14 @@ $(document).ready(function(){
 });
 
 var play_timer;
+var width=$(document.body).width();
 function init_index_image()
 {
 
 	var time_span = 2000;
 	var img_item = $("#index_images").find("a");
-
 	var total = img_item.length;
-	var width = $(document.body).width();
+	//var width = $(document.body).width();
 	img_item.css("width",width);	
 	$(".roll_box").append($(".roll_box").html());
 	$(".roll_box").width(width*total*2+100);
@@ -56,7 +56,7 @@ function show_img(idx)
 {
 	
 	var oidx = $(".slider_page").find(".current").attr("rel");
-	var width =  $(document.body).width();
+	//var width =  $(document.body).width();
 	if(idx!=oidx)
 	{
 		$(".roll_box").animate({left:($(".roll_box").position().left-((idx - oidx)*width))+"px"},300,function(){
@@ -68,7 +68,7 @@ function show_img(idx)
 
 function auto_play_index_img()
 {
-	var width =  $(document.body).width();
+	//var width =  $(document.body).width();
 	var oidx = parseInt($(".slider_page").find(".current").attr("rel"));
 	var img_item = $("#index_images").find("a");	
 	var total = img_item.length/2;

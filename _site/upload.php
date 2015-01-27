@@ -10,35 +10,35 @@ require './app/Lib/app_init.php';
 		}
 		//上传处理
 		//创建comment目录
-		if (!is_dir(APP_ROOT_PATH."public/attachment")) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment");
-	             @chmod(APP_ROOT_PATH."public/attachment", 0777);
+		if (!is_dir(APP_ROOT_PATH."public/attachment/images")) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images");
+	             @chmod(APP_ROOT_PATH."public/attachment/images", 0777);
 	        }
 		
 	    $dir = to_date(get_gmtime(),"Ym");
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir, 0777);
 	        }
 	        
 	    $dir = $dir."/".to_date(get_gmtime(),"d");
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir, 0777);
 	        }
 	     
 	    $dir = $dir."/".to_date(get_gmtime(),"H");
 	    
-	    if (!is_dir(APP_ROOT_PATH."public/attachment/".$dir)) { 
-	             @mkdir(APP_ROOT_PATH."public/attachment/".$dir);
-	             @chmod(APP_ROOT_PATH."public/attachment/".$dir, 0777);
+	    if (!is_dir(APP_ROOT_PATH."public/attachment/images/".$dir)) { 
+	             @mkdir(APP_ROOT_PATH."public/attachment/images/".$dir);
+	             @chmod(APP_ROOT_PATH."public/attachment/images/".$dir, 0777);
 	        }
 	        
 	  
 	    if(app_conf("IS_WATER_MARK")==1)
-	    $img_result = save_image_upload($_FILES,"image_file","attachment/".$dir,$whs=array('thumb'=>array(205,160,1,0)),1,1);
+	    $img_result = save_image_upload($_FILES,"image_file","attachment/images/".$dir,$whs=array('thumb'=>array(205,160,1,0)),1,1);
 	    else
-		$img_result = save_image_upload($_FILES,"image_file","attachment/".$dir,$whs=array('thumb'=>array(205,160,1,0)),0,1);	
+		$img_result = save_image_upload($_FILES,"image_file","attachment/images/".$dir,$whs=array('thumb'=>array(205,160,1,0)),0,1);	
 		
 		if(intval($img_result['error'])!=0)	
 		{
