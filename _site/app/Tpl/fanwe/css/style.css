@@ -292,7 +292,7 @@ a.linkorange:hover {color:#c07f42;text-decoration:none;}
 
 
 
-#puzzle  {background:url(../images/photos_splice.jpg) scroll 0% 0% transparent;height:200px;}
-#puzzle-content {padding-top:7%;width:40%;margin:0 px auto; height:40%;}
+#puzzle  {background:url(../images/photos_splice.jpg) scroll 0% 0% transparent;height:404px;background-size:100% 100%;}
+#puzzle-content {padding-top:14%;width:40%;margin:0 px auto; height:40%;}
 #vote-content {margin:0px auto;width:20%;height:20%;text-align:center;}  
 #ad {height:315px;width:100%;color:white;text-align:center;}
