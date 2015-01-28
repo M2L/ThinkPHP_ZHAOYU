@@ -216,8 +216,9 @@
 						</div>
 						<div id="tab2" style="display:none;">
 							<select name="upload_type">
-							<option value="0">普通上传</option>
-							<option value="1">水印上传</option>							
+							<option value="0">普通文件</option>
+							<option value="1" selected>普通图片</option>
+							<option value="2">水印图片</option>							
 							</select>
 							<input type="file" id="imgFile" name="imgFile" style="width:200px;" />&nbsp;&nbsp;
 							

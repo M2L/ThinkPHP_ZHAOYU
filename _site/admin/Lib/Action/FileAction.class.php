@@ -10,10 +10,27 @@
 class FileAction extends CommonAction{
 	public function do_upload()
 	{
+
+		switch (intval($_REQUEST['upload_type']))
+		{
+			case 0:
+				$result = $this->uploadFile();
+			break;
+			case 1:
+				$result = $this->uploadNormalImage();
+			break;
+			case 2:
+				$result = $this->uploadImage();
+			break;
+		}
+		
+		/*
 		if(intval($_REQUEST['upload_type'])==0)
 		$result = $this->uploadNormalImage();//uploadFile();
 		else
 		$result = $this->uploadImage();
+		*/
+
 		if($result['status'] == 1)
 		{
 			$list = $result['data'];

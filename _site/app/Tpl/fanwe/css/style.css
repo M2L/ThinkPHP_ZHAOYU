@@ -6,7 +6,7 @@ input{ font-family:Arial;}
 div{margin:0 auto; padding:0;}
 h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{margin:0; padding:0; border:none; list-style-type:none;}
 .wrap{ width:960px; height:auto;border-radius:5px 5px 0px 0px;} /*主体容器*/
-.font_blue:hover{color:#2c398c;}
+.font_blue:hover{color:#3366ff;} /*#2c398c*/
 .font_green:hover{color:#19612f;}
 .font_orange:hover{color:#824D22;}
 .font_red:hover{color:#971313;}
@@ -59,7 +59,7 @@ a:hover{ /*color:#000; */text-decoration:underline; }
 
 .main_nav{ padding-top:70px; margin-left:20px;}
 .main_nav li{ float:left;}
-.main_nav li a { padding:0px 12px;  line-height:26px; height:26px; font-size:14px;letter-spacing:5px; font-weight:bolder; text-decoration:none; display:inline-block; float:left;}
+.main_nav li a { padding:0px 12px;  line-height:26px; height:26px; font-size:16px;letter-spacing:5px; font-weight:bolder; text-decoration:none; display:inline-block; float:left; font-family:"微软雅黑";}
 .main_nav li a:hover { padding:0px 12px;  line-height:26px; height:26px; font-size:20px;letter-spacing:5px; font-weight:bolder; text-decoration:none; display:inline-block; float:left; }
 
 .main_nav li span{ display:inline-block;  height:40px; float:left; }
@@ -295,4 +295,6 @@ a.linkorange:hover {color:#c07f42;text-decoration:none;}
 #puzzle  {background:url(../images/photos_splice.jpg) scroll 0% 0% transparent;height:404px;background-size:100% 100%;}
 #puzzle-content {padding-top:14%;width:40%;margin:0 px auto; height:40%;}
 #vote-content {margin:0px auto;width:20%;height:20%;text-align:center;}  
-#ad {height:315px;width:100%;color:white;text-align:center;}
+#ad {height:315px;width:100%;color:white;text-align:center;position:relative;background:url(../images/variable_bg.jpg);}
+.curtain {position:absolute;width:560px;height:315px;top: 0; left: 0; bottom: 0; right: 0;margin:0 auto;}
+.video_container {position:absolute;width:560px;height:315px;top: 0; left: 0; bottom: 0; right: 0;margin:0 auto;background:#000;display:none;}

@@ -1,6 +1,23 @@
 $(document).ready(function(){
 	init_index_image();
+
+
+	$(".curtain").click(function(){
+		  
+  		$(".curtain").fadeOut(2000);
+  
+
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+	});
+
+
 });
+
 
 var play_timer;
 var width=$(document.body).width();
@@ -94,3 +111,33 @@ function auto_play_index_img()
 
 
 }
+
+
+
+
+
+
+
+	var player;
+	function onYouTubeIframeAPIReady() {
+
+	  player = new YT.Player('youtube-video', {
+	    events: {
+	      'onReady': onPlayerReady,
+	      'onStateChange': onPlayerStateChange
+	    }
+	  });
+
+	}
+
+	function onPlayerReady() {
+	  
+	  player.playVideo();
+		$(".video_container").fadeIn("slow");
+	  //do whatever you want here. Like, player.playVideo();
+
+	}
+
+	function onPlayerStateChange() {
+	  
+	}
