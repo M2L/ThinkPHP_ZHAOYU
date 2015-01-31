@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* 公共样式 */
-body{background:url(../images/variable_bg.jpg); word-break:break-all;background-repeat:repeat-x;background-size:100% 100%;
+body{background:url(../images/variable_bg2.jpg); word-break:break-all;background-repeat:repeat-x;background-size:100% 100%;
    word-wrap:break-word;  font-size:12px; font-family: Arial,"宋体",Verdana; line-height:150%; margin:0px; padding:0px; color:#404040; min-width:960px;}
 input{ font-family:Arial;}
 div{margin:0 auto; padding:0;}
@@ -72,6 +72,8 @@ a:hover{ /*color:#000; */text-decoration:underline; }
 .login_tip{ text-align:right; padding-top:5px; }
 
 .add_project{ margin-left:10px; background:url("../images/action_project.gif") no-repeat scroll 0 0 transparent; width:114px; height:28px; padding:12px 0 0 0; display:inline-block;}
+.add_project_big{ margin-left:10px; background:url("../images/launch_img.jpg") no-repeat scroll 0 0 transparent; width:200px; height:40px; background-size:200px 40px; display:inline-block;}
+.explore_project_big{ margin-left:10px; background:url("../images/explore_img.jpg") no-repeat scroll 0 0 transparent; width:200px; height:40px; background-size:200px 40px; display:inline-block;}
 .api_login_tip{ display:inline-block; background:url(../images/down_arr.gif) no-repeat right; padding-right:10px; color:#666; cursor:pointer;}
 
 .shadow_bg{background:url(../images/new_content_bg.jpg) no-repeat; width:992px; margin:0 auto;}
@@ -293,8 +295,14 @@ a.linkorange:hover {color:#c07f42;text-decoration:none;}
 
 
 #puzzle  {background:url(../images/photos_splice.jpg) scroll 0% 0% transparent;height:404px;background-size:100% 100%;}
-#puzzle-content {padding-top:14%;width:40%;margin:0 px auto; height:40%;}
-#vote-content {margin:0px auto;width:20%;height:20%;text-align:center;}  
+#puzzle-content {padding-top:10%;width:40%;margin:0 px auto; height:40%;}
+#vote-content {margin:0px auto; text-align:center;padding:30px;background:#fff;border-radius:5px;}  
+#begin_span {font-family:'微软雅黑';font-size:20px;padding-bottom:20px}
+
+
 #ad {height:315px;width:100%;color:white;text-align:center;position:relative;background:url(../images/variable_bg.jpg);}
+#ad_span {margin:0 auto;clear:both; height:20px; position:relative;border:2px solid;width:50px;cursor:hand;}
 .curtain {position:absolute;width:560px;height:315px;top: 0; left: 0; bottom: 0; right: 0;margin:0 auto;}
 .video_container {position:absolute;width:560px;height:315px;top: 0; left: 0; bottom: 0; right: 0;margin:0 auto;background:#000;display:none;}
+
+

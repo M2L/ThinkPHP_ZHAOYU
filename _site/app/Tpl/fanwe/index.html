@@ -47,7 +47,7 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 	</div>
 	<div class="curtain"> 
 			<div style="float:left; height:50%; margin-bottom:-10px;"></div>
-			<div style="margin:0 auto;clear:both; height:20px; position:relative;border:2px;width:50px"> 点击播放
+			<div id="ad_span"> 点击播放
 
 			</div>
 	</div>
@@ -117,7 +117,9 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 <div id="puzzle">
 	<div id="puzzle-content">
 	<div id="vote-content"  >
-		<a href="{url r="project#add"}" class="add_project f_r"></a>	
+		<div id="begin_span"><b>开始众筹</b></div>
+		<a href="{url r="project#add"}" class="add_project_big  "></a>	
+		<a href="{url r="deals"}" class="explore_project_big  "></a>	
 	</div>
 	</div>
 

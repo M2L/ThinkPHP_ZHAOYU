@@ -2,7 +2,7 @@ $(document).ready(function(){
 	init_index_image();
 
 
-	$(".curtain").click(function(){
+	$("#ad_span").click(function(){
 		  
   		$(".curtain").fadeOut(2000);
   
