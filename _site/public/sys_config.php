@@ -13,7 +13,7 @@ return array(
 'SMALL_WIDTH'=>'200',
 'SMALL_HEIGHT'=>'200',
 'WATER_ALPHA'=>'75',
-'WATER_POSITION'=>'5',
+'WATER_POSITION'=>'3',
 'MAX_IMAGE_SIZE'=>'3000000',
 'ALLOW_IMAGE_EXT'=>'jpg,gif,png',
 'BG_COLOR'=>'#ffffff',
