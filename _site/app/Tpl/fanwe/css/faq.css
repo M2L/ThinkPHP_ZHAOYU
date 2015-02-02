@@ -1,4 +1,13 @@
 .faq_box{ padding:20px;}
 .faq_title{ font-size:16px; font-weight:bolder; padding:5px 0px;}
-.faq_question{ border:1px solid #F0F0F0; background:#f5f5f5; color:#72A40F; font-size:14px; height:35px; line-height:35px; padding:0px 20px;  cursor:pointer;}
-.faq_answer{ display:none; border:1px dotted #f0f0f0; border-top:0px; padding:0px 20px; font-size:14px; line-height:35px;}
+.faq_question{  color:#2c398c; font-size:14px; height:35px; line-height:35px; padding:0px 20px;  cursor:pointer;}
+.faq_answer{ display:none;  border-top:0px; padding:0px 20px; font-size:14px; line-height:35px;}
+
+
+
+.switch_nav{ height:31px; border:#2c398c solid;border-width:2px 0 0; padding-left:10px;}
+.switch_nav ul li{ float:left;}
+.switch_nav ul li a{ display:inline-block; float:left; height:30px; color:#666; text-decoration:none; line-height:30px; padding:0px 15px; border:#2c398c solid 1px; border-top:none; background:#f2f2f2; margin-left:5px;}
+.switch_nav ul li a:hover{ text-decoration:none; }
+.switch_nav ul li.current a{ background:#2c398c; color:#fff; border:#2c398c solid 1px; border-top:none; font-size:14px;}
+
