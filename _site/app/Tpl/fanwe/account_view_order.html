@@ -9,7 +9,7 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/cart_pay.js";
  
 
 <div class="shadow_bg">
-	<div class="wrap white_box"">
+	<div class="wrap white_box">
 		<div class="page_title">
 			{$order_info.deal_name}
 		</div>
@@ -119,12 +119,14 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/cart_pay.js";
 				{if $user_info.money gt 0}
 					<div class="form_row">
 						<div class="blank15"></div>
-						<label class="title">使用余额支付:</label>
+						<label class="title">使用余额支付其中:</label>
 						<input type="text" class="textbox" value="0" name="credit" style="width:100px;" />
 						<label class="title" style="padding-left:10px;">可用余额：{function name="format_price" v=$user_info.money}</label>
 						<input type="hidden" name="max_credit" value="{$user_info.money}" />
 						<input type="hidden" name="max_pay" value="{$max_pay}" />
 						<div class="blank15"></div>
+						<label class="title">余下金额请选择支付方式:</label>
+						<div class="blank5"></div>
 					</div>
 				{/if}
 						

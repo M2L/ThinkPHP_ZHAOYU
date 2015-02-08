@@ -65,10 +65,10 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 		<ul class="tab-nav" style="text-align:center">
 			{foreach from=$cate_list item=cate_item key=key}
 			{if $key<7 }
-			{if ($key eq 1) or ($key eq 2) or ($key eq 4) or ($key eq 6)}
+			{if (($key mod 6) eq 1) or (($key mod 6) eq 2) or (($key mod 6) eq 4) or (($key mod 6) eq 0)}
 			<div style="width:49%;display:inline-block;overflow:hidden">
 			{/if}	
-			{if ($key eq 1) or ($key eq 6)}
+			{if (($key mod 6) eq 1) or (($key mod 6) eq 0)}
 			<li><a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}" >
 						<img src="{$cate_item.image}"  width="460px"  height="372px"
 						onmouseover="this.src='{$cate_item.hover_image}'"onmouseout="this.src='{$cate_item.image}'"/>
@@ -79,7 +79,7 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 						onmouseover="this.src='{$cate_item.hover_image}'"onmouseout="this.src='{$cate_item.image}'"/>
 					</a></li>
 			{/if}
-			{if ($key eq 1) or ($key eq 3) or ($key eq 5) or ($key eq 6)}
+			{if (($key mod 6) eq 1) or (($key mod 6) eq 3) or (($key mod 6) eq 5) or (($key mod 6) eq 0)}
 			</div>			
 			{/if}
 			{/if}

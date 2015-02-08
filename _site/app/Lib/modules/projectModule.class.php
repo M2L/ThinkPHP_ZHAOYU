@@ -110,6 +110,12 @@ class projectModule extends BaseModule
 		{
 			showErr("请选择项目分类",$ajax,"");
 		}
+		$data['allow_pay_radio']=strim($_REQUEST['allow_pay_radio']);
+		if($data['allow_pay_radio']=='')
+		{
+			showErr("请勾选同意服务协议",$ajax,"");
+		}
+
 		$data['province'] = strim($_REQUEST['province']);
 		if($data['province']=='')
 		{
@@ -124,7 +130,7 @@ class projectModule extends BaseModule
 		$data['image'] = replace_public(addslashes(trim($_REQUEST['image'])));
 		if($data['image']=="")
 		{			
-			showErr("上传封面图片",$ajax,"");
+			showErr("请上传封面图片",$ajax,"");
 		}
 		
 		require_once APP_ROOT_PATH."system/libs/words.php";	
