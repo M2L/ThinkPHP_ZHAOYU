@@ -11,7 +11,7 @@ $this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/ajaxupload.js";
 <link rel="stylesheet" type="text/css" href="{function name="parse_css" v="$dpagecss"}" />
 <div class="blank"></div>
 
-<div class="shadow_bg">
+<div class=" ">
 	<div class="wrap white_box">
 
 			<div class="page_title">
@@ -68,12 +68,19 @@ $this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/ajaxupload.js";
 			<div class="blank"></div>
 			{/if}
 			
-			<div class="add_item_btn" id="add_item_btn">
-			<div class="ui-button gray" rel="gray">
+			<div class="add_item_btn" >
+			<div class="ui-button gray" rel="gray" id="add_item_btn">
 						<div>
 							<span>添加新的回报项目</span>
 						</div>
 			</div>
+			{if $deal_item_list}
+			<div class="ui-button green" rel="green" id="savenext" style="margin-left:5px;">
+              <div>
+                <span><a href="{url r="project#add_spon_info" p="id=$deal_item.id"}">下一步</a></span>
+              </div>
+        </div>
+      {/if}
 			<div class="blank"></div>
 			</div>
 			

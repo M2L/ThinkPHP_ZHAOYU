@@ -600,4 +600,29 @@ function pass_date($time)
 		}
 		return $time_span_lang;
 }
+
+
+
+
+//遮盖部分信息
+function hide_info($info)
+{
+
+	$length=mb_strlen(strval($info),'UTF-8');
+	if($length>1)
+	{
+		$cover_number=floor($length / 2);
+		$start=floor(($length-$cover_number)/2);
+		$covered_string=mb_substr($info,$start,$cover_number,'UTF-8');
+		$result=str_replace($covered_string,str_repeat("*",$cover_number),$info);
+		return $result;
+	}
+	else
+	{
+		return $info;
+	}
+
+}
+
+
 ?>

@@ -4,6 +4,7 @@ $(document).ready(function(){
 	bind_add_item();
 	bind_cancel_item();
 	bind_del_item();
+	bind_next_form();
 });
 function bind_item_form()
 {
@@ -237,4 +238,13 @@ function bind_del_item()
 		
 		return false;
 	});
+}
+
+function bind_next_form(){
+
+	$("#savenext").click(function(){
+		$("#next_form").submit();
+	});
+
+
 }

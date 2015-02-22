@@ -97,8 +97,9 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/discover.js";
 				<a href="{url r="deals" p="id=$cate_item.id"}" title="{$cate_item.name}">
 					{if $cate_item.icon neq ""}
 						<img src="{$cate_item.icon}"  width="40px"  height="40px" style="vertical-align:middle"/>
+						<span style="font-size:18px">{$cate_item.name}</span>
 					{/if}
-					<span style="font-size:18px">{$cate_item.name}</span>
+					
 				</a>
  
 			

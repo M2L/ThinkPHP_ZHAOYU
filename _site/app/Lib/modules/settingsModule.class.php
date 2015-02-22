@@ -355,11 +355,12 @@ class settingsModule extends BaseModule
 		if(!$GLOBALS['user_info'])
 		app_redirect(url("user#login"));
 		
+		/*
 		if($GLOBALS['user_info']['ex_real_name']!=""||$GLOBALS['user_info']['ex_account_info']!=""||$GLOBALS['user_info']['ex_contact']!="")
 		{
 			app_redirect_preview();
 		}
-		
+		*/
 		$GLOBALS['tmpl']->display("settings_bank.html");
 	}
 	

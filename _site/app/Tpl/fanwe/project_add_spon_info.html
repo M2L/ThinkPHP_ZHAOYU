@@ -1,0 +1,55 @@
+{include file="inc/header.html"} 
+<?php
+$this->_var['dpagecss'][] = $this->_var['TMPL_REAL']."/css/add_item.css";
+$this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/sponsor_info.js";
+$this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/sponsor_info.js";
+$this->_var['dpagejs'][] = $this->_var['TMPL_REAL']."/js/ajaxupload.js";
+?>
+<script type="text/javascript" src="{function name="parse_script" v="$dpagejs" c="$dcpagejs"}"></script>
+<link rel="stylesheet" type="text/css" href="{function name="parse_css" v="$dpagecss"}" />
+
+<div class="blank"></div> 
+ 
+  <div class="wrap white_box">
+
+      <div class="page_title">
+       发起人信息 
+      </div>
+  
+      <div class="switch_nav"></div>
+      <form id="sponsor_form" action="{url r="project#save_spon_info" p="id=$deal_id"}" method="post">  
+        <div class="form_row">
+          <label class="title w100"> 真实姓名:</label>
+          <input type="text" name="real_name" class="textbox" value="{$spon_info.ex_real_name}"/>
+          <div class="blank15"></div>
+          <label class="title w100"> 联系方式:</label>
+          <input type="text" name="contact" class="textbox" value="{$spon_info.ex_contact}"/>
+          <div class="blank15"></div>
+          <label class="title w100"> 银行名称:</label>
+          <input type="text" name="bank" class="textbox"  value="{$spon_info.ex_bank}"/>
+          <div class="blank15"></div>
+          <label class="title w100"> 开户人名称:</label>
+          <input type="text" name="account_name" class="textbox"  value="{$spon_info.ex_account_name}"/>
+          <div class="blank15"></div>
+          <label class="title w100"> 银行账号:
+          </label><input type="text" name="account_info" class="textbox" value="{$spon_info.ex_account_info}"/>
+          <div class="blank15"></div>
+          <input type="hidden" value="1" name="ajax" />
+          <input type="hidden" name="info" value="0" />
+      </div>
+      <div class="submit_btn_row">
+        <div class="ui-button green" rel="green" id="savenext" style="margin-left:5px;">
+              <div>
+                <span>完成</span>
+              </div>
+        </div>
+        <div class="blank15"></div>
+      </div>
+    </form>
+  </div>
+ 
+
+<div class="blank"></div>
+{include file="inc/footer.html"} 
+
+

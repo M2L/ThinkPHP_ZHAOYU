@@ -1,7 +1,7 @@
 .add_item_tip{ padding:10px; }
 .add_item_tip h1{ font-size:16px; font-family:"微软雅黑"; display:inline-block; height:30px;}
 .add_item_tip ul li{ font-size:14px;}
-.add_item_btn{ width:140px; margin:0px auto; }
+.add_item_btn{  margin:15px; }
 .ui-button_green{ float:left; background:url(../images/ui-buttonbg.gif) no-repeat 0px -490px; height:32px; padding-left:5px;}
 .ui-button_green div{ float:left; background:url(../images/ui-buttonbg.gif) no-repeat right -140px; height:32px; }
 .ui-button_green span{ background:none; white-space:nowrap; border:none; padding:0px 15px 0px 10px; height:30px;  color:#fff; font-size:14px; float:left;  line-height:30px; display:inline-block; cursor:pointer;}

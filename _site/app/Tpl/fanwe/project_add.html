@@ -123,7 +123,7 @@ $this->_var['dcpagejs'][] = APP_ROOT_PATH."/system/region.js";
 					<input type="hidden" name="image" value="{$deal_image.url}" />
 					<input type="hidden" name="savenext" value="0" />
 					<div> <input type="checkbox" name="allow_pay_radio" value="allowed" checked />
-						<span>项目成功后，筹资金额的<?php echo app_conf("PAY_RADIO"); ?>%将被扣除，作为第三方支付平台的手续费
+						<span>项目成功后，筹资金额的<?php echo floatval(app_conf("PAY_RADIO"))*100; ?>%将被扣除，作为第三方支付平台的手续费
 							<a href="{url r="help#1"}" style="text-decoration:none">《服务协议》</a>
 						</span>
 

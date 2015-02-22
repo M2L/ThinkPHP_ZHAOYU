@@ -9,7 +9,7 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/api_bind.js";
  
 
 <div class="shadow_bg">
-	<div class="wrap white_box"">
+	<div class="wrap white_box">
 		<div class="page_title">
 			帐户绑定
 		</div>
@@ -19,9 +19,8 @@ $this->_var['dcpagejs'][] = $this->_var['TMPL_REAL']."/js/api_bind.js";
 				<li><a href="{url r="settings#password"}">修改密码</a></li>
 				<li><a href="{url r="settings#consignee"}">配送地址</a></li>
 				<li class="current"><a href="{url r="settings#bind"}">绑定设置</a></li>
-				{if $user_info.ex_real_name eq '' and $user_info.ex_account_info eq '' and $user_info.ex_contact eq ''}
 				<li><a href="{url r="settings#bank"}">银行帐户</a></li>
-				{/if}
+
 			</ul>
 		</div>
 		

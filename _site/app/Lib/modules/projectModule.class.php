@@ -301,6 +301,69 @@ class projectModule extends BaseModule
 			app_redirect_preview();
 		}
 	}
+
+	public function add_spon_info()
+	{
+			if(!$GLOBALS['user_info'])
+			app_redirect(url("user#login"));	
+
+			$spon_info=array(
+				'ex_real_name'=>hide_info($GLOBALS['user_info']['ex_real_name']),
+				'ex_contact'=>hide_info($GLOBALS['user_info']['ex_contact']),
+				'ex_bank'=>hide_info($GLOBALS['user_info']['ex_bank']),
+				'ex_account_info'=>hide_info($GLOBALS['user_info']['ex_account_info']),
+				'ex_account_name'=>hide_info($GLOBALS['user_info']['ex_account_name'])
+				);
+
+			$id = intval($_REQUEST['id']);
+			$GLOBALS['tmpl']->assign("deal_id",$id);
+			$GLOBALS['tmpl']->assign("spon_info",$spon_info);
+			$GLOBALS['tmpl']->display("project_add_spon_info.html");
+	}
+
+	public function save_spon_info(){
+			if(!$GLOBALS['user_info'])
+			app_redirect(url("user#login"));	
+
+			$id = intval($_REQUEST['id']);
+			$ajax = intval($_REQUEST['ajax']);	
+
+			$deal_item = $GLOBALS['db']->getRow("select * from ".DB_PREFIX."deal where is_effect = 0 and is_delete = 0 and id = ".$id." and user_id = ".intval($GLOBALS['user_info']['id']));
+			if($deal_item)
+			{		
+
+				if ($_REQUEST['real_name']) $real_name=$_REQUEST['real_name'];
+				else 	showErr("请填写真实名称",$ajax,"");	
+
+				if ($_REQUEST['contact'])$contact=$_REQUEST['contact'];
+				else showErr("请填写联系方式",$ajax,"");	
+
+				if ($_REQUEST['bank'])$bank=$_REQUEST['bank'];
+				else showErr("请填写银行名称",$ajax,"");	
+
+				if ($_REQUEST['account_name'])$account_name=$_REQUEST['account_name'];
+				else showErr("请填写开户人名称",$ajax,"");	
+
+				if ($_REQUEST['account_info'])$account_info=$_REQUEST['account_info'];
+				else showErr("请填写银行账号",$ajax,"");	
+
+
+				if ($real_name && $contact && $account_info && $account_name && $bank) 
+				{
+					$GLOBALS['db']->query("update ".DB_PREFIX."user set ex_real_name = '".$real_name."',ex_bank = '".$bank."',ex_account_name = '".$account_name."',ex_account_info = '".$account_info."',ex_contact = '".$contact."' where id = ".intval($GLOBALS['user_info']['id']));
+					showSuccess("",$ajax,url("project#add_item",array("id"=>$id)));
+
+				}
+				
+				
+			}else
+				{
+					app_redirect_preview();
+				}
+
+			
+	}
+
 	
 	public function edit_item()
 	{			
