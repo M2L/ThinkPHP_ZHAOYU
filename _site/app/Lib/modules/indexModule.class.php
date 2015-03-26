@@ -28,7 +28,7 @@ class indexModule extends BaseModule
 			$cate_result= array();
 			foreach($cate_list as $k=>$v)
 			{
-				$cate_result[$v['id']] = $v;
+				$cate_result[$v['sort']] = $v;
 			}
 			set_dynamic_cache("INDEX_CATE_LIST",$cate_result);
 		}

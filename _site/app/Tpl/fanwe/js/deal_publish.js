@@ -191,7 +191,7 @@ function bind_project_form()
 		}
 		if(!$(this).find("input[name='allow_pay_radio']").prop("checked"))
 		{
-			$showErr("请勾选同意服务协议");
+			$.showErr("请勾选同意服务协议");
 			return false;
 		}
 		

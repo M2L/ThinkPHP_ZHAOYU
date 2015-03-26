@@ -444,6 +444,11 @@ class projectModule extends BaseModule
 			showErr("图片不能超过四张",$ajax);
 		}
 		
+		if(!isset($data['repaid_day']) || $data['repaid_day']<1)
+		{
+			showErr("请输入正确的回报时间",$ajax);
+		}
+
 		if($id==0)
 		{
 			$GLOBALS['db']->autoExecute(DB_PREFIX."deal_item",$data,"INSERT","","SILENT");
