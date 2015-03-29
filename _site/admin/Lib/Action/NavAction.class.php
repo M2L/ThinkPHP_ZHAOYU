@@ -39,8 +39,14 @@ class NavAction extends CommonAction{
 					'fav'	=>	'关注',
 				),
 			),
-			'help' =>array(
+			'help' => array(
 				'name'	=>	'帮助',
+			),
+			'project' => array(
+				'name' => '项目',
+				'acts' => array(
+					'add' => '发起',
+				),
 			),
 		);
 	}

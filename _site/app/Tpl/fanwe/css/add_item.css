@@ -14,5 +14,10 @@
 _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/del_image.png', sizingMethod='scale');
 _background-image:none; }
 
+
+.add_item_btn a {text-decoration:none;}
+.add_item_btn a:visited {color:#fff;}
+/*
 .add_item_btn a{ float:left; width:80px; display:inline-block; height:30px; line-height:30px; color:#690; text-decoration:none; margin-left:10px;}
 .add_item_btn a:hover{ float:left; width:80px; display:inline-block; height:30px; line-height:30px; color:#9c0; text-decoration:none;}
+*/

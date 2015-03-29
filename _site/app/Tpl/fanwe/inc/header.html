@@ -58,10 +58,10 @@ var send_span = {function name="app_conf" v="SEND_SPAN"}000;
 		
 		
 		<ul class="main_nav f_l">
-				{foreach from=$nav_list item=nav_item}
+				{foreach from=$nav_list item=nav_item key=key}
 					<li {if $nav_item.current eq 1}class="current"{/if}>
-						<span >
-						<a href="{$nav_item.url}"  target="{if $nav_item.blank eq 1}_blank{/if}" title="{$nav_item.name}" class="font_gray {$nav_item.color}">{$nav_item.name}</a>	
+						<span {if $key eq 0}class="span_first"{/if}>
+						<a href="{$nav_item.url}"  target="{if $nav_item.blank eq 1}_blank{/if}" title="{$nav_item.name}" class="font_gray ">{$nav_item.name}</a>	
 						</span>		
 					</li>
 				{/foreach}
@@ -79,7 +79,8 @@ var send_span = {function name="app_conf" v="SEND_SPAN"}000;
 			<input type="text" id="header_keyword" name="k" value="{if $p_k neq ''}{$p_k}{else}搜索你想要的...{/if}" class="seach_text">	
 			<input type="hidden" name="redirect" value="1" />			
 			<div class="blank5"></div>
-			<a href="{url r="project#add"}" class="add_project f_r"></a>	
+			<!-- <a href="{url r="project#add"}" class="add_project f_r"></a>	
+		-->
 			</div>
 			</form>	
 			
