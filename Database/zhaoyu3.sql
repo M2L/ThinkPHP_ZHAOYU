@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-02-22 10:50:30
+-- Generation Time: 2015-03-30 09:55:23
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -37,14 +37,14 @@ CREATE TABLE IF NOT EXISTS `fanwe_admin` (
   `login_ip` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_adm_name` (`adm_name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `fanwe_admin`
 --
 
 INSERT INTO `fanwe_admin` (`id`, `adm_name`, `adm_password`, `is_effect`, `is_delete`, `role_id`, `login_time`, `login_ip`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, 4, 1422888797, '127.0.0.1');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, 4, 1427015101, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -524,7 +524,7 @@ INSERT INTO `fanwe_conf` (`id`, `name`, `value`, `group_id`, `input_type`, `valu
 (18, 'BG_COLOR', '#ffffff', 2, 0, '', 0, 0, 57),
 (19, 'IS_WATER_MARK', '1', 2, 1, '0,1', 1, 1, 58),
 (20, 'TEMPLATE', 'fanwe', 1, 0, '', 1, 1, 17),
-(21, 'SITE_LOGO', './public/attachment/201501/20/01/54bd426ab62c4.png', 1, 2, '', 1, 1, 19),
+(21, 'SITE_LOGO', './public/attachment/images/201503/27/00/551433ba48364.png', 1, 2, '', 1, 1, 19),
 (173, 'SEO_TITLE', '兆余大学生众筹', 1, 0, '', 1, 1, 20),
 (25, 'REPLY_ADDRESS', 'info@fanwe.com', 3, 0, '', 1, 1, 77),
 (23, 'MAIL_ON', '1', 3, 1, '0,1', 1, 1, 72),
@@ -774,35 +774,36 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_cate` (
   `hover_image` varchar(255) DEFAULT NULL,
   `icon` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=64 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=65 ;
 
 --
 -- 转存表中的数据 `fanwe_deal_cate`
 --
 
 INSERT INTO `fanwe_deal_cate` (`id`, `name`, `sort`, `image`, `hover_image`, `icon`) VALUES
-(11, '设计', 21, './public/attachment/201411/13/03/5463ae3c3e3f1.jpg', './public/attachment/201411/13/03/5463b299af81d.jpg', './public/attachment/images/201502/01/01/54cd16bcac680.png'),
-(26, '写作', 17, './public/attachment/201411/13/03/5463aec3ceb7d.jpg', '', './public/attachment/images/201502/01/01/54cd16dde2d35.png'),
-(3, '电影', 3, './public/attachment/images/201502/16/21/54e1f4fcd6ff3.jpg', './public/attachment/images/201502/16/21/54e1f501a2545.jpg', './public/attachment/images/201502/01/01/54cd16ee5ad31.png'),
-(12, '摄影', 20, './public/attachment/201411/13/03/5463af2af0240.jpg', '', './public/attachment/images/201502/01/01/54cd16fc06c96.png'),
-(5, '音乐', 5, './public/attachment/images/201502/16/21/54e1f51af2c2d.jpg', './public/attachment/images/201502/16/21/54e1f51fb0e8c.jpg', './public/attachment/images/201502/01/01/54cd17070191a.png'),
-(20, '教育', 11, './public/attachment/201411/13/03/5463af92132b0.jpg', '', './public/attachment/images/201502/01/01/54cd1713da8bb.png'),
-(7, '运动', 7, './public/attachment/201411/13/03/5463aff1f1746.jpg', './public/attachment/201411/13/03/5463b5fcadf12.jpg', './public/attachment/images/201502/01/01/54cd171fce42f.png'),
-(8, '游戏', 8, './public/attachment/201411/13/03/5463b023e5f1f.jpg', '', './public/attachment/images/201502/01/01/54cd17306350a.png'),
-(9, '戏剧', 9, '', '', './public/attachment/images/201502/01/01/54cd173c9ba36.png'),
-(10, '其他', 22, './public/attachment/201411/13/03/5463b07221870.jpg', './public/attachment/201411/13/03/5463b078e0c8c.jpg', './public/attachment/images/201502/01/01/54cd174bb5f8e.png'),
-(19, '艺术', 10, '', '', './public/attachment/images/201502/01/01/54cd175c75c0b.png'),
-(6, '美食', 6, './public/attachment/images/201502/16/21/54e1f052e1e99.jpg', './public/attachment/images/201502/16/21/54e1f10d23a44.jpg', './public/attachment/images/201502/01/01/54cd176d91946.png'),
-(21, '舞蹈', 12, '', '', './public/attachment/images/201502/01/01/54cd17819064e.png'),
-(22, '漫画', 13, '', '', './public/attachment/images/201502/01/01/54cd178d92454.png'),
-(23, '动物', 14, '', '', './public/attachment/images/201502/01/01/54cd17984ecb2.png'),
-(24, '健康', 15, '', '', './public/attachment/images/201502/03/04/54cfe24b551d0.png'),
-(25, '视频', 16, '', '', './public/attachment/images/201502/01/01/54cd17acaa247.png'),
-(2, '时尚', 2, './public/attachment/images/201502/16/21/54e1f3484119e.jpg', './public/attachment/images/201502/16/21/54e1f4e02d29a.jpg', './public/attachment/images/201502/01/01/54cd17ba8c8d1.png'),
-(27, '社群', 18, '', '', './public/attachment/images/201502/01/01/54cd17c76df81.png'),
-(28, '环境', 19, '', '', './public/attachment/images/201502/01/01/54cd17cfc7af8.png'),
-(1, '科技', 1, './public/attachment/images/201502/16/22/54e1fbf4cb0af.jpg', './public/attachment/images/201502/16/22/54e1fbfa40ef6.jpg', ''),
-(4, '公益', 4, './public/attachment/images/201502/16/22/54e1fc104cb7b.jpg', './public/attachment/images/201502/16/22/54e1fc14ca065.jpg', '');
+(11, '设计', 21, './public/attachment/201411/13/03/5463ae3c3e3f1.jpg', './public/attachment/201411/13/03/5463b299af81d.jpg', './public/attachment/images/201503/27/00/551435afbffc2.png'),
+(26, '写作', 17, './public/attachment/201411/13/03/5463aec3ceb7d.jpg', '', './public/attachment/images/201503/27/00/5514362d6fbc3.png'),
+(3, '电影', 22, './public/attachment/images/201502/16/21/54e1f4fcd6ff3.jpg', './public/attachment/images/201502/16/21/54e1f501a2545.jpg', './public/attachment/images/201503/27/00/551431c2ea491.png'),
+(12, '摄影', 20, './public/attachment/201411/13/03/5463af2af0240.jpg', '', './public/attachment/images/201503/27/00/551435bfe9c50.png'),
+(5, '音乐', 5, './public/attachment/images/201502/16/21/54e1f51af2c2d.jpg', './public/attachment/images/201502/16/21/54e1f51fb0e8c.jpg', './public/attachment/images/201503/27/00/55143566bac2d.png'),
+(20, '教育', 11, './public/attachment/201411/13/03/5463af92132b0.jpg', '', './public/attachment/images/201503/27/00/551435db15edb.png'),
+(7, '运动', 7, './public/attachment/201411/13/03/5463aff1f1746.jpg', './public/attachment/201411/13/03/5463b5fcadf12.jpg', './public/attachment/images/201503/27/00/5514357d39339.png'),
+(8, '游戏', 8, './public/attachment/201411/13/03/5463b023e5f1f.jpg', '', './public/attachment/images/201503/27/00/5514358976460.png'),
+(9, '戏剧', 9, '', '', './public/attachment/images/201503/27/00/5514359618ae1.png'),
+(10, '其他', 23, './public/attachment/201411/13/03/5463b07221870.jpg', './public/attachment/201411/13/03/5463b078e0c8c.jpg', './public/attachment/images/201503/27/00/551435a11dd6f.png'),
+(19, '艺术', 10, '', '', './public/attachment/images/201503/27/00/551435d32ba07.png'),
+(6, '美食', 6, './public/attachment/images/201503/23/02/550f08acc7d50.jpg', './public/attachment/images/201502/16/21/54e1f10d23a44.jpg', './public/attachment/images/201503/27/00/55143573a4969.png'),
+(21, '舞蹈', 12, '', '', './public/attachment/images/201503/27/00/551435e787004.png'),
+(22, '漫画', 13, '', '', './public/attachment/images/201503/27/00/551435f27ad5d.png'),
+(23, '动物', 14, '', '', './public/attachment/images/201503/27/00/551435fe4f693.png'),
+(24, '健康', 15, '', '', './public/attachment/images/201503/27/00/551436067f4ad.png'),
+(25, '视频', 16, '', '', './public/attachment/images/201503/27/00/551436228187b.png'),
+(2, '时尚', 2, './public/attachment/images/201503/23/02/550f05642c4b6.JPG', './public/attachment/images/201502/16/21/54e1f4e02d29a.jpg', './public/attachment/images/201503/27/00/5514320d3da8a.png'),
+(27, '社群', 18, '', '', './public/attachment/images/201503/27/00/5514363b87342.png'),
+(28, '环境', 19, '', '', './public/attachment/images/201503/27/00/5514364520b25.png'),
+(1, '科技', 1, './public/attachment/images/201502/16/22/54e1fbf4cb0af.jpg', './public/attachment/images/201502/16/22/54e1fbfa40ef6.jpg', './public/attachment/images/201503/27/06/551485ba150a6.png'),
+(4, '公益', 4, './public/attachment/images/201503/23/02/550f0f2a380a3.jpg', './public/attachment/images/201502/16/22/54e1fc14ca065.jpg', './public/attachment/images/201503/27/00/55143200e5d67.png'),
+(64, '旅游', 3, './public/attachment/images/201503/23/02/550f0b573078e.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -1312,7 +1313,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_deal_item` (
   PRIMARY KEY (`id`),
   KEY `deal_id` (`deal_id`),
   KEY `price` (`price`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=42 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=43 ;
 
 --
 -- 转存表中的数据 `fanwe_deal_item`
@@ -1336,6 +1337,7 @@ INSERT INTO `fanwe_deal_item` (`id`, `deal_id`, `price`, `support_count`, `suppo
 (31, 58, 2000.0000, 1, 2000.0000, '爱的礼物：精美工艺品红酒及晚餐。如果你希望得到一份爱的礼物与记念，请留言你的详细地址姓名电话，我将会于爱天使重建之后的三个月内为你寄一件精美的工艺品及澳洲红宝龙红酒一瓶及邀请你到爱天使享受晚餐！你将成为爱天使的终生会员。。。', 1, 0.0000, 0, 0, 50),
 (32, 58, 3000.0000, 1, 3000.0000, '爱的礼物：精美工艺品及红酒及晚餐。如果你希望得到一份爱的礼物与记念，请留言你的详细地址姓名电话，我将会于爱天使重建之后的三个月内为你寄一件精美的工艺品及价值688元的澳洲康纳瓦拉红酒一瓶及邀请你到爱天使享受晚餐！你将成为爱天使的终生会员。。。', 1, 0.0000, 0, 0, 50),
 (33, 61, 5.0000, 0, 0.0000, 'x', 0, 0.0000, 0, 0, 1),
+(42, 80, 23.0000, 0, 0.0000, '', 0, 0.0000, 0, 0, 2),
 (41, 80, 12.0000, 0, 0.0000, '', 0, 0.0000, 0, 0, 23);
 
 -- --------------------------------------------------------
@@ -6013,7 +6015,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_log` (
   `module` varchar(255) NOT NULL,
   `action` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2807 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=2848 ;
 
 --
 -- 转存表中的数据 `fanwe_log`
@@ -6437,7 +6439,48 @@ INSERT INTO `fanwe_log` (`id`, `log_info`, `log_time`, `log_admin`, `log_ip`, `l
 (2803, '其他更新成功', 1424067416, 1, '127.0.0.1', 1, 'DealCate', 'update'),
 (2804, '公益更新成功', 1424067424, 1, '127.0.0.1', 1, 'DealCate', 'update'),
 (2805, '科技更新成功', 1424067452, 1, '127.0.0.1', 1, 'DealCate', 'update'),
-(2806, '公益更新成功', 1424067477, 1, '127.0.0.1', 1, 'DealCate', 'update');
+(2806, '公益更新成功', 1424067477, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2807, 'admin登录成功', 1427015101, 1, '127.0.0.1', 1, 'Public', 'do_login'),
+(2808, '发起项目添加成功', 1427015629, 1, '127.0.0.1', 1, 'Nav', 'insert'),
+(2809, '发起项目更新成功', 1427015651, 1, '127.0.0.1', 1, 'Nav', 'update'),
+(2810, '时尚更新成功', 1427018982, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2811, '美食更新成功', 1427019397, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2812, '美食更新成功', 1427019608, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2813, '美食更新成功', 1427019822, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2814, '电影更新成功', 1427020127, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2815, '时尚更新成功', 1427020138, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2816, '时尚更新成功', 1427020148, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2817, '电影更新成功', 1427020159, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2818, '旅游添加成功', 1427020488, 1, '127.0.0.1', 1, 'DealCate', 'insert'),
+(2819, '旅游更新成功', 1427020505, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2820, '时尚更新成功', 1427020596, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2821, '时尚更新成功', 1427020606, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2822, '公益更新成功', 1427021483, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2823, '电影更新成功', 1427358020, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2824, '公益更新成功', 1427358081, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2825, '时尚更新成功', 1427358094, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2826, '更新系统配置', 1427358152, 1, '127.0.0.1', 1, 'Conf', 'update'),
+(2827, '更新系统配置', 1427358352, 1, '127.0.0.1', 1, 'Conf', 'update'),
+(2828, '更新系统配置', 1427358524, 1, '127.0.0.1', 1, 'Conf', 'update'),
+(2829, '音乐更新成功', 1427358951, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2830, '美食更新成功', 1427358964, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2831, '运动更新成功', 1427358974, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2832, '游戏更新成功', 1427358986, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2833, '戏剧更新成功', 1427358999, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2834, '其他更新成功', 1427359010, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2835, '设计更新成功', 1427359024, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2836, '摄影更新成功', 1427359040, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2837, '艺术更新成功', 1427359059, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2838, '教育更新成功', 1427359068, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2839, '舞蹈更新成功', 1427359080, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2840, '漫画更新成功', 1427359091, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2841, '动物更新成功', 1427359103, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2842, '健康更新成功', 1427359111, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2843, '视频更新成功', 1427359139, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2844, '写作更新成功', 1427359150, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2845, '社群更新成功', 1427359164, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2846, '环境更新成功', 1427359173, 1, '127.0.0.1', 1, 'DealCate', 'update'),
+(2847, '科技更新成功', 1427379515, 1, '127.0.0.1', 1, 'DealCate', 'update');
 
 -- --------------------------------------------------------
 
@@ -6825,7 +6868,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_nav` (
   `u_param` varchar(255) NOT NULL,
   `color` varchar(20) DEFAULT NULL COMMENT '标签字体颜色',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=50 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=51 ;
 
 --
 -- 转存表中的数据 `fanwe_nav`
@@ -6835,7 +6878,8 @@ INSERT INTO `fanwe_nav` (`id`, `name`, `url`, `blank`, `sort`, `is_effect`, `u_m
 (42, '首页', '', 0, 1, 1, 'index', '', 0, '', 'font_blue'),
 (47, '新手指南', '', 0, 4, 1, 'help', '', 0, 'act=9', 'font_red'),
 (46, '所有项目', '', 0, 2, 1, 'deals', 'index', 0, '', 'font_green'),
-(48, '最新动态', '', 0, 3, 1, 'news', 'index', 0, '', 'font_orange');
+(48, '最新动态', '', 0, 3, 1, 'news', 'index', 0, '', 'font_orange'),
+(50, '发起项目', '', 0, 5, 1, 'project', 'add', 0, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -9309,7 +9353,7 @@ CREATE TABLE IF NOT EXISTS `fanwe_user` (
 INSERT INTO `fanwe_user` (`id`, `user_name`, `user_pwd`, `create_time`, `update_time`, `is_effect`, `email`, `money`, `login_time`, `login_ip`, `province`, `city`, `password_verify`, `sex`, `build_count`, `support_count`, `focus_count`, `integrate_id`, `intro`, `ex_real_name`, `ex_bank`, `ex_account_name`, `ex_account_info`, `ex_contact`, `code`, `sina_id`, `sina_token`, `sina_secret`, `sina_url`, `tencent_id`, `tencent_token`, `tencent_secret`, `tencent_url`) VALUES
 (17, 'zhaoyu', '6714ccb93be0fda4e51f206b91b46358', 1352227130, 1352227130, 1, '900930@gmail.com', 1200.0000, 1352232219, '127.0.0.1', '法国', '里昂', '', 1, 2, 1, 1, 0, '兆余', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (18, 'fzmatthew', '6714ccb93be0fda4e51f206b91b46358', 1352229180, 1352229180, 1, 'a@b.com', 980.0000, 1352246617, '127.0.0.1', '北京', '东城区', '', 1, 0, 3, 1, 0, '爱旅行的猫，生活在路上', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 1352230142, 1352230142, 1, 'test@test.com', 540.0000, 1422888807, '127.0.0.1', '广东', '江门', '', 0, 2, 11, 0, 0, '', '李**蛋', '*位', '*方', '*w', '23****648', '', '', '', '', '', '', '', '', ''),
+(19, 'test', '098f6bcd4621d373cade4e832627b4f6', 1352230142, 1352230142, 1, 'test@test.com', 540.0000, 1427337592, '127.0.0.1', '广东', '江门', '', 0, 2, 11, 0, 0, '', '李**蛋', '*位', '*方', '*w', '23****648', '', '', '', '', '', '', '', '', ''),
 (20, 'maomao', 'c2fe59547322a4bb7db612af5dae1281', 1380612008, 1380612008, 1, '10000@qq.com', 0.0000, 1380612008, '127.0.0.1', '', '', '', 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (21, 'myself', 'a2bab50d3a611bcf6e9c4af2d6a8dc4f', 1402205812, 1402205812, 1, 'isanlik@qq.com', 0.0000, 1402383955, '127.0.0.1', '', '', '', 0, 1, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
